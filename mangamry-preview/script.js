@@ -243,6 +243,73 @@
     }
   }
 
+  /* ---------- Project photo lightbox ---------- */
+  var lightbox = document.getElementById('lightbox');
+  var works = Array.prototype.slice.call(document.querySelectorAll('.work'));
+  if (lightbox && works.length) {
+    var lbImg = lightbox.querySelector('.lightbox__img');
+    var lbCap = lightbox.querySelector('.lightbox__caption');
+    var lbIndex = 0;
+    var lastFocus = null;
+
+    var show = function (i) {
+      lbIndex = (i + works.length) % works.length;
+      var w = works[lbIndex];
+      var img = w.querySelector('img');
+      lbImg.src = w.getAttribute('href');
+      lbImg.alt = img.alt;
+      lbCap.textContent = w.getAttribute('data-caption') + '  ·  ' + (lbIndex + 1) + ' / ' + works.length;
+      // restart the fade-in
+      lbImg.style.animation = 'none'; void lbImg.offsetWidth; lbImg.style.animation = '';
+    };
+    var openLb = function (i) {
+      lastFocus = document.activeElement;
+      show(i);
+      lightbox.hidden = false;
+      root.classList.add('lightbox-open');
+      lightbox.querySelector('.lightbox__close').focus();
+    };
+    var closeLb = function () {
+      lightbox.hidden = true;
+      root.classList.remove('lightbox-open');
+      if (lastFocus) lastFocus.focus();
+    };
+
+    works.forEach(function (w, i) {
+      w.addEventListener('click', function (e) { e.preventDefault(); openLb(i); });
+    });
+    lightbox.querySelector('.lightbox__close').addEventListener('click', closeLb);
+    lightbox.querySelector('.lightbox__nav--prev').addEventListener('click', function () { show(lbIndex - 1); });
+    lightbox.querySelector('.lightbox__nav--next').addEventListener('click', function () { show(lbIndex + 1); });
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox || e.target.classList.contains('lightbox__figure')) closeLb();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (lightbox.hidden) return;
+      if (e.key === 'Escape') closeLb();
+      if (e.key === 'ArrowRight') show(lbIndex + 1);
+      if (e.key === 'ArrowLeft') show(lbIndex - 1);
+      if (e.key === 'Tab') { // keep focus inside the dialog
+        var f = lightbox.querySelectorAll('button');
+        var first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+
+    // Swipe between photos
+    var lbStartX = 0, lbStartY = 0;
+    lightbox.addEventListener('touchstart', function (e) {
+      lbStartX = e.touches[0].clientX; lbStartY = e.touches[0].clientY;
+    }, { passive: true });
+    lightbox.addEventListener('touchend', function (e) {
+      var dx = e.changedTouches[0].clientX - lbStartX;
+      var dy = e.changedTouches[0].clientY - lbStartY;
+      if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) show(lbIndex + (dx < 0 ? 1 : -1));
+      else if (dy > 90 && Math.abs(dy) > Math.abs(dx)) closeLb();
+    }, { passive: true });
+  }
+
   /* ---------- Quote form (preview: no backend) ---------- */
   var form = document.getElementById('quote-form');
   var success = document.getElementById('form-success');
