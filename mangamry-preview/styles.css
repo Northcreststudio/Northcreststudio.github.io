@@ -326,7 +326,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .owner-card__link .icon { width: 16px; height: 16px; color: var(--navy-light); }
 .owner-card__link:hover { color: var(--navy); }
 
-img.owner-card__avatar { width: 92px; height: 92px; object-fit: cover; padding: 0; border: 3px solid var(--amber); box-shadow: 0 10px 22px -10px rgba(10, 46, 92, .7); background: var(--navy); }
 .owner-card__skills { font-size: 14.5px; color: var(--ink); font-weight: 600; margin: -4px 0 10px; line-height: 1.45; }
 
 /* ---------- Projects gallery ---------- */
@@ -766,7 +765,7 @@ html:not(.js) .carousel__controls { display: none; }
   .checklist li { font-size: 15px; }
   .about__owners { padding: 16px; gap: 14px; }
   .owner-card { padding: 20px; gap: 16px; }
-  .owner-card__avatar, img.owner-card__avatar { width: 72px; height: 72px; font-size: 21px; }
+  .owner-card__avatar { width: 72px; height: 72px; font-size: 21px; }
   .owner-card__name { font-size: 19px; }
   .owner-card__link { font-size: 13.5px; }
 
