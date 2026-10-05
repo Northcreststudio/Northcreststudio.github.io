@@ -7,7 +7,7 @@
   <meta name="description" content="In Scribe Log Homes is a family-owned log home builder in Rocky Mountain House, Alberta. Full scribe diamond notch log homes, post and beam, timber frame, gazebos, log stairs and railings, and custom timber furniture.">
   <!-- Preview copy: kept out of search results so it never competes with the client's live site -->
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#141210">
+  <meta name="theme-color" content="#121212">
   <link rel="canonical" href="https://northcreststudio.github.io/inscribe-log-homes/">
 
   <meta property="og:type" content="website">
@@ -24,13 +24,11 @@
 
   <link rel="icon" href="images/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;600;700;800;900&family=Lato:wght@400;700&display=swap">
   <link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
-
   <script>document.documentElement.classList.add('js');</script>
 
   <script type="application/ld+json">
@@ -44,19 +42,8 @@
     "telephone": "+1-403-845-9360",
     "email": "info@inscribeloghomes.net",
     "foundingDate": "2012",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "RR4 Site 143 Comp 18",
-      "addressLocality": "Rocky Mountain House",
-      "addressRegion": "AB",
-      "postalCode": "T4T 2A4",
-      "addressCountry": "CA"
-    },
-    "openingHoursSpecification": [{
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "09:00", "closes": "17:00"
-    }],
+    "address": { "@type": "PostalAddress", "streetAddress": "RR4 Site 143 Comp 18", "addressLocality": "Rocky Mountain House", "addressRegion": "AB", "postalCode": "T4T 2A4", "addressCountry": "CA" },
+    "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "17:00" }],
     "sameAs": ["https://www.instagram.com/inscribeloghomes/", "https://www.linkedin.com/in/travis-johnson-45b13a179/"],
     "knowsAbout": ["Full scribe diamond notch log homes", "Post and beam construction", "Timber frame structures", "Log gazebos", "Log stairs and railings", "Custom log and timber furniture", "Bandsaw milling and custom cutting"]
   }
@@ -65,399 +52,472 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- Hidden SVG defs: the hand-drawn "scribe line" used under key words -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <path id="scribe" d="M2 9 C 30 3, 52 13, 80 7 S 132 2, 160 8 S 210 12, 238 6"/>
+    </defs>
+  </svg>
+
   <!-- ============ HEADER ============ -->
   <header class="site-header">
-    <div class="container nav">
-      <a href="#home" class="logo" aria-label="In Scribe Log Homes — home">
-        <img src="images/logo.png" alt="In Scribe Log Homes" width="300" height="221">
-      </a>
+    <div class="wrap nav">
+      <a href="#home" class="logo" aria-label="In Scribe Log Homes — home"><img src="images/logo.png" alt="In Scribe Log Homes" width="300" height="221"></a>
       <nav class="nav__links" aria-label="Primary">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
+        <a href="#about">The Family</a>
+        <a href="#craft">The Craft</a>
+        <a href="#services">What We Build</a>
         <a href="#process">Process</a>
+        <a href="#plans">Plans</a>
         <a href="#gallery">Gallery</a>
-        <a href="#contact" class="btn btn--red btn--sm">Contact Us</a>
       </nav>
-      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav__right">
+        <a class="nav__phone" href="tel:+14038459360">403-845-9360</a>
+        <a href="#contact" class="btn btn--red btn--sm">Start Your Build</a>
+        <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+      </div>
     </div>
   </header>
 
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <nav class="mobile-menu__inner" aria-label="Mobile">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#process">Process</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
+      <a href="#about"><i>01</i>The Family</a>
+      <a href="#craft"><i>02</i>The Craft</a>
+      <a href="#services"><i>03</i>What We Build</a>
+      <a href="#process"><i>04</i>Process</a>
+      <a href="#plans"><i>05</i>Plans</a>
+      <a href="#gallery"><i>06</i>Gallery</a>
+      <a href="#contact"><i>07</i>Start Your Build</a>
       <div class="mobile-menu__foot">
-        <a class="btn btn--red btn--block" href="tel:+14038459360">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          403-845-9360
-        </a>
-        <p>Monday – Friday, 9–5</p>
+        <a class="btn btn--red btn--block" href="tel:+14038459360">Call 403-845-9360</a>
+        <p>Monday – Friday, 9–5 · Rocky Mountain House, AB</p>
       </div>
     </nav>
   </div>
 
   <main id="main">
-    <!-- ============ HERO ============ -->
+    <!-- ============ HERO: slideshow of finished homes ============ -->
     <section class="hero" id="home" aria-labelledby="hero-title">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="hero__overlay" aria-hidden="true"></div>
-      <div class="container hero__content">
-        <p class="eyebrow hero__eyebrow"><span class="eyebrow__dot"></span>In Scribe Log Homes · Rocky Mountain House, Alberta</p>
+      <div class="hero__slides" aria-hidden="true">
+        <div class="hero__slide is-active" style="background-image:url(images/hero.jpg)"></div>
+        <div class="hero__slide" data-bg="images/hero-2.jpg"></div>
+        <div class="hero__slide" data-bg="images/hero-3.jpg"></div>
+        <div class="hero__slide" data-bg="images/hero-4.jpg"></div>
+      </div>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
+
+      <div class="wrap hero__inner">
+        <p class="hero__kicker"><span class="dot"></span>Rocky Mountain House, Alberta · Est. 2012</p>
         <h1 class="hero__title" id="hero-title">
-          <span class="line"><span>Crafting <em>Timeless</em></span></span>
-          <span class="line"><span>Log Homes with</span></span>
-          <span class="line"><span>Precision and Passion</span></span>
+          <span class="line"><span>Crafting</span></span>
+          <span class="line"><span><em class="scribed">Timeless<svg viewBox="0 0 240 14" preserveAspectRatio="none" aria-hidden="true"><use href="#scribe"/></svg></em> Log Homes</span></span>
+          <span class="line line--sm"><span>with Precision and Passion</span></span>
         </h1>
-        <p class="hero__text">When it comes to quality you can trust; it’s an In Scribe Log Home. Each and every project is built at a professional level with pride.</p>
-        <div class="hero__actions">
-          <a href="#contact" class="btn btn--red btn--lg">Contact Us
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-          <a href="#gallery" class="btn btn--glass btn--lg">See Our Work</a>
+        <div class="hero__bottom">
+          <p class="hero__text">When it comes to quality you can trust; it’s an In Scribe Log Home. Each and every project is built at a professional level with pride.</p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--red btn--lg">Start Your Build <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="#gallery" class="btn btn--ghost btn--lg">See Our Work</a>
+          </div>
         </div>
       </div>
-      <div class="hero__badge" aria-hidden="true">
-        <span class="hero__badge-k">Family-owned</span>
-        <span class="hero__badge-v">Since 2012</span>
+
+      <div class="hero__reel wrap" role="group" aria-label="Featured homes">
+        <button type="button" class="reel is-active" data-slide="0"><span class="reel__bar"><i></i></span><span class="reel__label">Full scribe log home</span></button>
+        <button type="button" class="reel" data-slide="1"><span class="reel__bar"><i></i></span><span class="reel__label">Post &amp; beam</span></button>
+        <button type="button" class="reel" data-slide="2"><span class="reel__bar"><i></i></span><span class="reel__label">Log cabin</span></button>
+        <button type="button" class="reel" data-slide="3"><span class="reel__bar"><i></i></span><span class="reel__label">Winter in the pines</span></button>
       </div>
-      <a href="#trust" class="hero__scroll" aria-label="Scroll down"><span></span></a>
     </section>
 
-    <!-- ============ TRUST BAR ============ -->
-    <div class="trust" id="trust">
-      <ul class="container trust__list">
-        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9v12h14V9"/></svg>Family-Owned Since 2012</li>
-        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 12l8 9 8-9z"/></svg>Full Scribe Diamond Notch</li>
-        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="2"/></svg>Premium Grade A BC Wood</li>
-        <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M1 17h13V6H1zM14 10h4l3 3v4h-7"/><circle cx="5.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>Pre-Built &amp; Shipped to Your Site</li>
-      </ul>
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-label="Services">
+      <div class="marquee__track">
+        <span>Full Scribe Diamond Notch</span><b>◆</b><span>Post &amp; Beam</span><b>◆</b><span>Timber Frame</span><b>◆</b><span>Gazebos</span><b>◆</b><span>Log Stairs &amp; Railings</span><b>◆</b><span>Custom Furniture</span><b>◆</b><span>Custom Cutting</span><b>◆</b>
+        <span aria-hidden="true">Full Scribe Diamond Notch</span><b>◆</b><span aria-hidden="true">Post &amp; Beam</span><b>◆</b><span aria-hidden="true">Timber Frame</span><b>◆</b><span aria-hidden="true">Gazebos</span><b>◆</b><span aria-hidden="true">Log Stairs &amp; Railings</span><b>◆</b><span aria-hidden="true">Custom Furniture</span><b>◆</b><span aria-hidden="true">Custom Cutting</span><b>◆</b>
+      </div>
     </div>
 
-    <!-- ============ ABOUT ============ -->
-    <section class="section about" id="about" aria-labelledby="about-title">
-      <div class="rings rings--about" aria-hidden="true"></div>
-      <div class="container about__grid">
-        <figure class="about__photo reveal">
-          <img src="images/travis-amber.jpg" alt="Travis and Amber of In Scribe Log Homes in front of a log home under construction" width="1000" height="804" loading="lazy">
-          <figcaption><strong>Travis &amp; Amber</strong><span>Owner / Builders</span></figcaption>
-        </figure>
-        <div class="about__text reveal" style="--d:.1s">
-          <p class="eyebrow">About In Scribe</p>
-          <h2 class="section-title" id="about-title">Raised in the log business. Built with pride.</h2>
-          <p class="lead">Welcome to In Scribe Log Homes, where quality craftsmanship and tradition meet modern innovation. Founded in 2012, In Scribe is a family-owned business led by Travis and Amber, who have been immersed in the log home industry since childhood.</p>
-          <p>Travis, with years of experience working alongside his father Greg Johnson of Creative Log Homes, brings unmatched expertise and dedication to each build. Whether you’re dreaming of a cozy cabin in the wilderness or an elaborate custom log home, In Scribe works closely with you and your architect to create a design tailored to your needs and budget.</p>
-          <dl class="facts">
-            <div><dt>2012</dt><dd>Founded as a family-owned business</dd></div>
-            <div><dt>Since childhood</dt><dd>Travis &amp; Amber have been in the log business</dd></div>
-            <div><dt>Grade A</dt><dd>Premium wood sourced from the interior of BC</dd></div>
-          </dl>
-        </div>
-      </div>
-    </section>
+    <!-- ============ 01 THE FAMILY ============ -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <p class="index"><b>01</b> The Family</p>
+        <p class="readout" data-readout>Owner/builders Travis and Amber have been raised in the log business since childhood. Building log homes is a true passion, which shows in the finished product. Enjoyed by generations, for years to come.</p>
 
-    <!-- ============ STATEMENT ============ -->
-    <section class="statement" aria-label="Our approach">
-      <div class="container">
-        <p class="statement__text reveal">At In Scribe, we blend <em>traditional craftsmanship</em> with modern building techniques, ensuring compliance with the latest building codes while maintaining the rustic charm of handcrafted log homes.</p>
-      </div>
-    </section>
-
-    <!-- ============ SERVICES ============ -->
-    <section class="section services" id="services" aria-labelledby="services-title">
-      <div class="container">
-        <header class="section-head section-head--split reveal">
-          <div>
-            <p class="eyebrow">Services</p>
-            <h2 class="section-title" id="services-title">Handcrafted, from the log up.</h2>
-          </div>
-          <p class="section-head__aside">Most of our builds are custom. Let us bring your dream vision to life with In Scribe’s quality and dedication to excellence.</p>
-        </header>
-
-        <div class="bento">
-          <article class="svc svc--tall reveal">
-            <img src="images/services/log-homes.jpg" alt="Close-up of full scribe diamond notch log corners" loading="lazy" width="450" height="1000">
-            <div class="svc__body">
-              <span class="svc__num">01</span>
-              <h3>Full Scribe Diamond Notch Log Homes</h3>
-              <p>Handcrafted full scribe log homes using the traditional diamond notch technique, ensuring a precise fit and seamless design. Each home is custom-built with premium-grade wood.</p>
-            </div>
-          </article>
-          <article class="svc svc--wide reveal" style="--d:.08s">
-            <img src="images/services/post-and-beam.jpg" alt="Large post and beam home with log posts supporting a wide deck" loading="lazy" width="1000" height="665">
-            <div class="svc__body">
-              <span class="svc__num">02</span>
-              <h3>Post and Beam Construction</h3>
-              <p>Rustic charm with structural integrity, creating open, spacious interiors. Allows for large windows and modern layouts, perfect for any custom design.</p>
-            </div>
-          </article>
-          <article class="svc reveal" style="--d:.08s">
-            <img src="images/services/timber-frame.jpg" alt="Timber frame roof structure going up on a log home" loading="lazy" width="1000" height="750">
-            <div class="svc__body">
-              <span class="svc__num">03</span>
-              <h3>Timber Frame Structures &amp; Accents</h3>
-              <p>Structures that showcase the natural beauty of wood with exceptional strength — standalone or complementing existing designs.</p>
-            </div>
-          </article>
-          <article class="svc reveal" style="--d:.16s">
-            <img src="images/services/furniture.jpg" alt="Handcrafted log bar table and stools" loading="lazy" width="1000" height="562">
-            <div class="svc__body">
-              <span class="svc__num">04</span>
-              <h3>Custom Log &amp; Timber Furniture</h3>
-              <p>One-of-a-kind pieces, from tables to bed frames, handcrafted to match your home.</p>
-            </div>
-          </article>
-          <article class="svc reveal">
-            <img src="images/services/gazebos.jpg" alt="Log gazebo with green roof and twisted log posts" loading="lazy" width="640" height="426">
-            <div class="svc__body">
-              <span class="svc__num">05</span>
-              <h3>Gazebos</h3>
-              <p>Custom log gazebos — a charming outdoor retreat for enjoying nature in comfort.</p>
-            </div>
-          </article>
-          <article class="svc reveal" style="--d:.08s">
-            <img src="images/services/stairs-railings.jpg" alt="Floating half-log staircase in the shop" loading="lazy" width="750" height="1000">
-            <div class="svc__body">
-              <span class="svc__num">06</span>
-              <h3>Log Stairs &amp; Railings</h3>
-              <p>Custom-made to blend seamlessly with your log or timber home, inside and out.</p>
-            </div>
-          </article>
-          <article class="svc reveal" style="--d:.16s">
-            <img src="images/services/sawmill.jpg" alt="Log on the bandsaw mill at the In Scribe yard" loading="lazy" width="486" height="1000">
-            <div class="svc__body">
-              <span class="svc__num">07</span>
-              <h3>Bandsaw Mill &amp; Custom Cutting</h3>
-              <p>Our on-site bandsaw mill provides precise cutting for beams, boards and custom projects.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ PROCESS ============ -->
-    <section class="section process" id="process" aria-labelledby="process-title">
-      <div class="rings rings--process" aria-hidden="true"></div>
-      <div class="container process__grid">
-        <div class="process__intro">
-          <header class="reveal">
-            <p class="eyebrow eyebrow--light">How We Build</p>
-            <h2 class="section-title" id="process-title">The In Scribe build process.</h2>
-            <p class="process__lead">Although we do have some common plans to work off, most of our builds are custom. In order to make the project enjoyable for everyone, we go over everything so there are no surprises along the way.</p>
-          </header>
-          <figure class="process__photo reveal">
-            <img src="images/gallery/build-1.jpg" alt="Crane lifting logs into place on an In Scribe log home build" loading="lazy" width="1200" height="900">
-            <figcaption>Every home is pre-built at our yard in Rocky Mountain House, AB.</figcaption>
+        <div class="about__grid">
+          <figure class="about__photo" data-parallax>
+            <img src="images/travis-amber.jpg" alt="Travis and Amber of In Scribe Log Homes in front of a log home under construction" width="1000" height="804" loading="lazy">
+            <figcaption>Travis &amp; Amber<span>Owner / Builders</span></figcaption>
           </figure>
+          <div class="about__text">
+            <h2 id="about-title" class="h2">Quality craftsmanship and tradition, meeting modern innovation.</h2>
+            <p>Founded in 2012, In Scribe is a family-owned business. Travis, with years of experience working alongside his father Greg Johnson of Creative Log Homes, brings unmatched expertise and dedication to each build.</p>
+            <p>Whether you’re dreaming of a cozy cabin in the wilderness or an elaborate custom log home, In Scribe works closely with you and your architect to create a design tailored to your needs and budget.</p>
+            <ul class="ledger">
+              <li><span>Founded</span><b>2012</b></li>
+              <li><span>Ownership</span><b>Family-owned</b></li>
+              <li><span>Wood</span><b>Premium grade A, interior BC</b></li>
+              <li><span>Built at</span><b>Our yard in Rocky Mountain House</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 THE CRAFT (hotspots) ============ -->
+    <section class="craft" id="craft" aria-labelledby="craft-title">
+      <div class="grain" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="craft__head">
+          <div>
+            <p class="index index--light"><b>02</b> The Craft</p>
+            <h2 id="craft-title" class="h2 h2--light">Look closer. <span class="muted">Tap the markers.</span></h2>
+          </div>
+          <div class="toggle" role="tablist" aria-label="Choose a build style">
+            <button type="button" role="tab" class="toggle__btn is-active" aria-selected="true" aria-controls="craft-pb" id="tab-pb">Post &amp; Beam</button>
+            <button type="button" role="tab" class="toggle__btn" aria-selected="false" aria-controls="craft-fs" id="tab-fs">Full Scribe</button>
+            <span class="toggle__pill" aria-hidden="true"></span>
+          </div>
         </div>
 
-        <ol class="steps">
-          <li class="steps__track" aria-hidden="true"><span class="steps__fill"></span></li>
-          <li class="step reveal">
-            <span class="step__dot">1</span>
-            <div><h3>Design together</h3>
-            <p>We work together with you and one of our trusted architects to create the perfect design to suit your needs, and budget.</p></div>
+        <div class="craft__stage">
+          <div class="spots is-active" id="craft-pb" role="tabpanel" aria-labelledby="tab-pb">
+            <div class="spots__media">
+              <img src="images/craft-post-beam.jpg" alt="Post and beam home with large gable windows, log posts and a wide deck" width="1600" height="1064" loading="lazy">
+              <button type="button" class="spot" style="--x:43%;--y:52%" aria-expanded="false" data-title="Large windows, open layouts" data-text="The post and beam method allows for large windows and modern layouts, perfect for any custom design."><span>+</span></button>
+              <button type="button" class="spot" style="--x:14%;--y:88%" aria-expanded="false" data-title="Log posts & beams" data-text="Rustic charm with structural integrity, creating open, spacious interiors."><span>+</span></button>
+              <button type="button" class="spot" style="--x:31%;--y:37%" aria-expanded="false" data-title="Timber accents" data-text="Timber frame accents showcase the natural beauty of wood, adding warmth and elegance to any home."><span>+</span></button>
+              <button type="button" class="spot" style="--x:74%;--y:62%" aria-expanded="false" data-title="Built to code" data-text="Traditional craftsmanship with modern building techniques, ensuring compliance with the latest building codes."><span>+</span></button>
+            </div>
+          </div>
+          <div class="spots" id="craft-fs" role="tabpanel" aria-labelledby="tab-fs" hidden>
+            <div class="spots__media spots__media--tall">
+              <img src="images/craft-notch.jpg" alt="Stacked full scribe logs meeting at diamond notch corners" width="743" height="1650" loading="lazy">
+              <button type="button" class="spot" style="--x:56%;--y:24%" aria-expanded="false" data-title="Diamond notch" data-text="The traditional diamond notch technique, ensuring a precise fit and seamless design."><span>+</span></button>
+              <button type="button" class="spot" style="--x:60%;--y:58%" aria-expanded="false" data-title="Full scribe fit" data-text="Each full scribe log home is handcrafted and custom-built, offering durability and timeless beauty for generations to come."><span>+</span></button>
+              <button type="button" class="spot" style="--x:83%;--y:46%" aria-expanded="false" data-title="Grade A BC wood" data-text="In Scribe uses only premium grade A wood sourced from the interior of BC."><span>+</span></button>
+            </div>
+            <aside class="spots__aside">
+              <p class="h3">Full scribe, diamond notch.</p>
+              <p>We specialize in handcrafted full scribe log homes using the traditional diamond notch technique, ensuring a precise fit and seamless design.</p>
+            </aside>
+          </div>
+          <div class="spot-card" role="status" aria-live="polite" hidden>
+            <button type="button" class="spot-card__close" aria-label="Close">×</button>
+            <p class="spot-card__title"></p>
+            <p class="spot-card__text"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 WHAT WE BUILD (interactive index) ============ -->
+    <section class="services" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="services__head">
+          <p class="index"><b>03</b> What We Build</p>
+          <h2 id="services-title" class="h2">Seven ways we work with wood.</h2>
+        </div>
+
+        <ol class="svc-list" data-svc-list>
+          <li class="svc" data-img="images/services/log-homes.jpg">
+            <button type="button" class="svc__row" aria-expanded="false"><span class="svc__n">01</span><span class="svc__t">Full Scribe Log Homes</span><span class="svc__tag">Diamond notch</span><span class="svc__plus" aria-hidden="true"></span></button>
+            <div class="svc__panel"><div class="svc__inner"><img src="images/services/log-homes.jpg" alt="Diamond notch log corners" loading="lazy" width="450" height="1000"><p>We specialize in handcrafted full scribe log homes using the traditional diamond notch technique, ensuring a precise fit and seamless design. Each log home is custom-built with premium-grade wood, offering durability and timeless beauty for generations to come.</p></div></div>
           </li>
-          <li class="step reveal">
-            <span class="step__dot">2</span>
-            <div><h3>Preliminary plan</h3>
-            <p>A preliminary plan is created, where you can make any changes you may want to see. We all work together and discuss options along the way.</p></div>
+          <li class="svc" data-img="images/services/post-and-beam.jpg">
+            <button type="button" class="svc__row" aria-expanded="false"><span class="svc__n">02</span><span class="svc__t">Post &amp; Beam</span><span class="svc__tag">Open layouts</span><span class="svc__plus" aria-hidden="true"></span></button>
+            <div class="svc__panel"><div class="svc__inner"><img src="images/services/post-and-beam.jpg" alt="Post and beam home" loading="lazy" width="1000" height="665"><p>Our post and beam construction method combines rustic charm with structural integrity, creating open, spacious interiors. This versatile technique allows for large windows and modern layouts, perfect for any custom design.</p></div></div>
           </li>
-          <li class="step reveal">
-            <span class="step__dot">3</span>
-            <div><h3>Permits &amp; pricing</h3>
-            <p>Once there is a plan, you can apply for permits if needed. This is also a good time to involve an engineer, and any other contractors to get accurate pricing for all the finishing touches.</p></div>
+          <li class="svc" data-img="images/services/timber-frame.jpg">
+            <button type="button" class="svc__row" aria-expanded="false"><span class="svc__n">03</span><span class="svc__t">Timber Frame</span><span class="svc__tag">Structures &amp; accents</span><span class="svc__plus" aria-hidden="true"></span></button>
+            <div class="svc__panel"><div class="svc__inner"><img src="images/services/timber-frame.jpg" alt="Timber frame roof structure" loading="lazy" width="1000" height="750"><p>We craft stunning timber frame structures that showcase the natural beauty of wood while providing exceptional strength. These structures can stand alone or complement existing designs, adding warmth and elegance to any home.</p></div></div>
           </li>
-          <li class="step reveal">
-            <span class="step__dot">4</span>
-            <div><h3>Agreement &amp; scheduling</h3>
-            <p>Once a final plan is completed, we create a simple contract/agreement so we can book you into our build schedule.</p></div>
+          <li class="svc" data-img="images/services/gazebos.jpg">
+            <button type="button" class="svc__row" aria-expanded="false"><span class="svc__n">04</span><span class="svc__t">Gazebos</span><span class="svc__tag">Outdoor retreats</span><span class="svc__plus" aria-hidden="true"></span></button>
+            <div class="svc__panel"><div class="svc__inner"><img src="images/services/gazebos.jpg" alt="Log gazebo with green roof" loading="lazy" width="640" height="426"><p>We design and build custom log gazebos that provide a charming outdoor retreat for any setting. Crafted with care, these structures offer both functionality and style, perfect for enjoying nature in comfort.</p></div></div>
           </li>
-          <li class="step reveal">
-            <span class="step__dot">5</span>
-            <div><h3>Pre-built in Rocky Mountain House</h3>
-            <p>Your home is pre-built at our construction site in Rocky Mountain House, AB, where we pride ourselves on high quality log and timber craftsmanship.</p></div>
+          <li class="svc" data-img="images/services/stairs-railings.jpg">
+            <button type="button" class="svc__row" aria-expanded="false"><span class="svc__n">05</span><span class="svc__t">Log Stairs &amp; Railings</span><span class="svc__tag">Inside &amp; out</span><span class="svc__plus" aria-hidden="true"></span></button>
+            <div class="svc__panel"><div class="svc__inner"><img src="images/services/stairs-railings.jpg" alt="Floating half-log staircase" loading="lazy" width="750" height="1000"><p>Our log stairs and railings are handcrafted to enhance the natural appeal of your home’s interior and exterior spaces. Each piece is custom-made, ensuring it blends seamlessly with your log or timber home.</p></div></div>
           </li>
-          <li class="step reveal">
-            <span class="step__dot">6</span>
-            <div><h3>Shipped &amp; installed</h3>
-            <p>We disassemble, load onto trailers and ship the home to its final destination, where an In Scribe technical supervisor will oversee the home install.</p></div>
+          <li class="svc" data-img="images/services/furniture.jpg">
+            <button type="button" class="svc__row" aria-expanded="false"><span class="svc__n">06</span><span class="svc__t">Custom Furniture</span><span class="svc__tag">Log &amp; timber</span><span class="svc__plus" aria-hidden="true"></span></button>
+            <div class="svc__panel"><div class="svc__inner"><img src="images/services/furniture.jpg" alt="Handcrafted log bar table and stools" loading="lazy" width="1000" height="562"><p>Our custom log and timber furniture pieces are handcrafted to match your home’s aesthetic, offering unique, one-of-a-kind creations. From tables to bed frames, each piece is made with care, using high-quality wood for lasting beauty.</p></div></div>
+          </li>
+          <li class="svc" data-img="images/services/sawmill.jpg">
+            <button type="button" class="svc__row" aria-expanded="false"><span class="svc__n">07</span><span class="svc__t">Custom Cutting</span><span class="svc__tag">Bandsaw mill</span><span class="svc__plus" aria-hidden="true"></span></button>
+            <div class="svc__panel"><div class="svc__inner"><img src="images/services/sawmill.jpg" alt="Log on the bandsaw mill" loading="lazy" width="486" height="1000"><p>Our on-site bandsaw mill allows us to provide custom cutting services for all your unique wood needs. We offer precise cutting for beams, boards, and other custom projects, ensuring top quality and accuracy.</p></div></div>
           </li>
         </ol>
       </div>
-
-      <div class="container">
-        <div class="note reveal">
-          <div class="note__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.5"/><path d="M16 14.2a5 5 0 0 1 6 4.8"/></svg></div>
-          <p>We typically supply the log or timber package only, so it is good to collaborate the finishing work with local contractors where the home is going. <strong>We can help assist with this if you wish.</strong></p>
-        </div>
-      </div>
+      <div class="svc-float" aria-hidden="true"><img alt=""></div>
     </section>
 
-    <!-- ============ PLANS ============ -->
-    <section class="section plans" id="plans" aria-labelledby="plans-title">
-      <div class="container">
-        <header class="section-head section-head--split reveal">
-          <div>
-            <p class="eyebrow">A Few of Our Plans</p>
-            <h2 class="section-title" id="plans-title">Start from a plan, or start from scratch.</h2>
+    <!-- ============ 04 PROCESS (scrollytelling) ============ -->
+    <section class="process" id="process" aria-labelledby="process-title">
+      <div class="grain" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="process__head">
+          <p class="index index--light"><b>04</b> The Process</p>
+          <h2 id="process-title" class="h2 h2--light">From first sketch to the final log, <span class="muted">no surprises along the way.</span></h2>
+        </div>
+
+        <div class="story">
+          <div class="story__visual" aria-hidden="true">
+            <div class="story__frame">
+              <img class="is-active" src="images/plans/the-classic-ii.jpg" alt="" loading="lazy">
+              <img src="images/plans/the-ranch.jpg" alt="" loading="lazy">
+              <img src="images/gallery/build-12.jpg" alt="" loading="lazy">
+              <img src="images/gallery/build-10.jpg" alt="" loading="lazy">
+              <img src="images/gallery/build-3.jpg" alt="" loading="lazy">
+              <img src="images/gallery/build-1.jpg" alt="" loading="lazy">
+            </div>
+            <div class="story__count"><b class="story__now">01</b><span>/ 06</span></div>
+            <div class="story__meter"><i></i></div>
           </div>
-          <p class="section-head__aside">Tap a plan to see the full floor plan.</p>
-        </header>
-        <div class="plans__grid">
-          <a class="plan reveal" href="images/plans/the-classic.jpg" data-lightbox="plans" data-caption="The Classic — 20' × 25'">
-            <span class="plan__img"><img src="images/plans/the-classic.jpg" alt="The Classic log cabin plan: elevation and floor plans" loading="lazy" width="885" height="1100"></span>
-            <span class="plan__body"><span class="plan__name">The Classic</span><span class="plan__size">20' × 25'</span>
-              <span class="plan__specs"><span>1 Bed</span><span>1 Bath</span><span>500 sqft + 300 sqft loft</span><span>10' × 20' covered deck</span></span></span>
-          </a>
-          <a class="plan reveal" href="images/plans/hybrid-log-cabin.jpg" data-lightbox="plans" data-caption="Hybrid Log Cabin — 22' × 26'" style="--d:.08s">
-            <span class="plan__img"><img src="images/plans/hybrid-log-cabin.jpg" alt="Hybrid Log Cabin plan: elevation and floor plans" loading="lazy" width="867" height="1100"></span>
-            <span class="plan__body"><span class="plan__name">Hybrid Log Cabin</span><span class="plan__size">22' × 26'</span>
-              <span class="plan__specs"><span>1 Bed</span><span>1 Bath</span><span>572 sqft + 266 sqft loft</span></span></span>
-          </a>
-          <a class="plan reveal" href="images/plans/the-classic-ii.jpg" data-lightbox="plans" data-caption="The Classic II — 31' × 37'" style="--d:.16s">
-            <span class="plan__img"><img src="images/plans/the-classic-ii.jpg" alt="The Classic II log home plan: elevation and floor plans" loading="lazy" width="871" height="1100"></span>
-            <span class="plan__body"><span class="plan__name">The Classic II</span><span class="plan__size">31' × 37'</span>
-              <span class="plan__specs"><span>3 Bed</span><span>2 Bath</span><span>1147 sqft + 650 sqft loft</span></span></span>
-          </a>
-          <a class="plan reveal" href="images/plans/the-ranch.jpg" data-lightbox="plans" data-caption="The Ranch — 68' × 40'" style="--d:.24s">
-            <span class="plan__img"><img src="images/plans/the-ranch.jpg" alt="The Ranch log home plan: elevation and floor plans" loading="lazy" width="815" height="1100"></span>
-            <span class="plan__body"><span class="plan__name">The Ranch</span><span class="plan__size">68' × 40'</span>
-              <span class="plan__specs"><span>5 Bed</span><span>5 Bath</span><span>2000 sqft</span><span>Walk-out basement</span><span>Wrap-around deck</span></span></span>
-          </a>
+
+          <ol class="story__steps">
+            <li class="beat is-active" data-beat="0">
+              <span class="beat__n">01</span>
+              <h3>Design together</h3>
+              <p>Although we do have some common plans to work off, most of our builds are custom. We work together with you and one of our trusted architects to create the perfect design to suit your needs, and budget.</p>
+              <img class="beat__img" src="images/plans/the-classic-ii.jpg" alt="The Classic II log home plan" loading="lazy">
+            </li>
+            <li class="beat" data-beat="1">
+              <span class="beat__n">02</span>
+              <h3>Preliminary plan</h3>
+              <p>A preliminary plan is then created, where you can make any changes you may want to see. We all work together and discuss options along the way.</p>
+              <img class="beat__img" src="images/plans/the-ranch.jpg" alt="The Ranch log home plan" loading="lazy">
+            </li>
+            <li class="beat" data-beat="2">
+              <span class="beat__n">03</span>
+              <h3>Permits &amp; pricing</h3>
+              <p>Once there is a plan, you can apply for permits if needed. This is also a good time to involve an engineer if required, as well as any other contractors to get accurate pricing for all the finishing touches.</p>
+              <img class="beat__img" src="images/gallery/build-12.jpg" alt="Truck loaded with long logs" loading="lazy">
+            </li>
+            <li class="beat" data-beat="3">
+              <span class="beat__n">04</span>
+              <h3>Agreement &amp; scheduling</h3>
+              <p>Once a final plan is completed, we create a simple contract/agreement so we can book you into our build schedule.</p>
+              <img class="beat__img" src="images/gallery/build-10.jpg" alt="Log walls at the In Scribe yard" loading="lazy">
+            </li>
+            <li class="beat" data-beat="4">
+              <span class="beat__n">05</span>
+              <h3>Pre-built at our yard</h3>
+              <p>All of our homes are pre-built at our construction site in Rocky Mountain House, AB, where we pride ourselves on high quality log and timber craftsmanship.</p>
+              <img class="beat__img" src="images/gallery/build-3.jpg" alt="Log home being pre-built at the yard" loading="lazy">
+            </li>
+            <li class="beat" data-beat="5">
+              <span class="beat__n">06</span>
+              <h3>Shipped &amp; installed</h3>
+              <p>Once the package is complete, we disassemble, load onto trailers and ship the home to its final destination, where an In Scribe technical supervisor oversees the install.</p>
+              <img class="beat__img" src="images/gallery/build-1.jpg" alt="Crane setting logs on site" loading="lazy">
+            </li>
+          </ol>
+        </div>
+
+        <div class="callout">
+          <p><b>Good to know:</b> we typically supply the log or timber package only, so it’s good to collaborate the finishing work with local contractors where the home is going. We can help assist with this if you wish.</p>
         </div>
       </div>
     </section>
 
-    <!-- ============ GALLERY ============ -->
-    <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
-      <div class="container">
-        <header class="section-head section-head--center reveal">
-          <p class="eyebrow">See Our Work</p>
-          <h2 class="section-title" id="gallery-title">Homes enjoyed by generations.</h2>
-        </header>
-
-        <div class="filters reveal" role="group" aria-label="Filter photos">
-          <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">All</button>
-          <button type="button" class="filter" data-filter="home" aria-pressed="false">Finished Homes</button>
-          <button type="button" class="filter" data-filter="interior" aria-pressed="false">Interiors</button>
-          <button type="button" class="filter" data-filter="build" aria-pressed="false">On the Build Site</button>
+    <!-- ============ 05 PLANS (footprint explorer) ============ -->
+    <section class="plans" id="plans" aria-labelledby="plans-title">
+      <div class="wrap">
+        <div class="plans__head">
+          <p class="index"><b>05</b> A Few of Our Plans</p>
+          <h2 id="plans-title" class="h2">Compare the footprints.</h2>
         </div>
 
-        <div class="masonry" id="masonry">
-          <!-- items injected from data below if JS runs; static fallback list keeps photos visible without JS -->
-          <a class="shot" data-cat="home" href="images/gallery/home-1.jpg"><img src="images/gallery/thumbs/home-1.jpg" alt="Two-storey log home with green metal roof among pine trees" loading="lazy" width="640" height="427"></a>
-          <a class="shot" data-cat="build" href="images/gallery/build-2.jpg"><img src="images/gallery/thumbs/build-2.jpg" alt="Log home walls and timber roof frame going up beside a garden" loading="lazy" width="640" height="480"></a>
-          <a class="shot" data-cat="interior" href="images/gallery/interior-2.jpg"><img src="images/gallery/thumbs/interior-2.jpg" alt="Log home great room with exposed log trusses and a chandelier" loading="lazy" width="480" height="640"></a>
-          <a class="shot" data-cat="home" href="images/gallery/home-2.jpg"><img src="images/gallery/thumbs/home-2.jpg" alt="Log home with timber gable and large deck on stone columns" loading="lazy" width="640" height="361"></a>
-          <a class="shot" data-cat="home" href="images/gallery/home-3.jpg"><img src="images/gallery/thumbs/home-3.jpg" alt="Log home with dark roof in a snowy pine forest" loading="lazy" width="640" height="480"></a>
-          <a class="shot" data-cat="build" href="images/gallery/build-3.jpg"><img src="images/gallery/thumbs/build-3.jpg" alt="Log walls and roof beams under construction at the yard" loading="lazy" width="640" height="480"></a>
-          <a class="shot" data-cat="interior" href="images/gallery/interior-1.jpg"><img src="images/gallery/thumbs/interior-1.jpg" alt="Living room with tall windows, antler chandelier and mountain view" loading="lazy" width="640" height="426"></a>
-          <a class="shot" data-cat="home" href="images/gallery/home-4.jpg"><img src="images/gallery/thumbs/home-4.jpg" alt="Log cabin with timber gable and covered deck at sunset" loading="lazy" width="640" height="480"></a>
-          <a class="shot" data-cat="build" href="images/gallery/build-11.jpg"><img src="images/gallery/thumbs/build-11.jpg" alt="Round log gazebo frame being assembled" loading="lazy" width="480" height="640"></a>
-          <a class="shot" data-cat="home" href="images/gallery/home-5.jpg"><img src="images/gallery/thumbs/home-5.jpg" alt="Lakeside post and beam home with large windows" loading="lazy" width="640" height="426"></a>
-          <a class="shot" data-cat="interior" href="images/gallery/interior-5.jpg"><img src="images/gallery/thumbs/interior-5.jpg" alt="Hand-peeled log post beside a stone fireplace" loading="lazy" width="426" height="640"></a>
-          <a class="shot" data-cat="build" href="images/gallery/build-8.jpg"><img src="images/gallery/thumbs/build-8.jpg" alt="Log home with radiating roof logs during construction" loading="lazy" width="640" height="480"></a>
-          <a class="shot" data-cat="home" href="images/gallery/home-6.jpg"><img src="images/gallery/thumbs/home-6.jpg" alt="Log home with blue metal roof and wood deck" loading="lazy" width="640" height="370"></a>
-          <a class="shot" data-cat="home" href="images/gallery/home-7.jpg"><img src="images/gallery/thumbs/home-7.jpg" alt="Log home with green roof overlooking a forest" loading="lazy" width="640" height="426"></a>
-          <a class="shot" data-cat="interior" href="images/gallery/interior-3.jpg"><img src="images/gallery/thumbs/interior-3.jpg" alt="Log kitchen with skylights and timber ceiling" loading="lazy" width="480" height="640"></a>
-          <a class="shot" data-cat="build" href="images/gallery/build-4.jpg"><img src="images/gallery/thumbs/build-4.jpg" alt="Log walls with timber roof frame against a blue sky" loading="lazy" width="640" height="480"></a>
-          <a class="shot" data-cat="home" href="images/gallery/home-8.jpg"><img src="images/gallery/thumbs/home-8.jpg" alt="Large log home with snow on the roof in winter" loading="lazy" width="640" height="480"></a>
-          <a class="shot" data-cat="build" href="images/gallery/build-7.jpg"><img src="images/gallery/thumbs/build-7.jpg" alt="Curved log staircase being lifted by crane" loading="lazy" width="640" height="426"></a>
-          <a class="shot" data-cat="interior" href="images/gallery/interior-4.jpg"><img src="images/gallery/thumbs/interior-4.jpg" alt="Log home kitchen with staircase and loft railing" loading="lazy" width="640" height="480"></a>
-          <a class="shot" data-cat="home" href="images/gallery/home-9.jpg"><img src="images/gallery/thumbs/home-9.jpg" alt="Log home with shingled upper storey and covered porch" loading="lazy" width="640" height="444"></a>
-          <a class="shot" data-cat="build" href="images/gallery/build-5.jpg"><img src="images/gallery/thumbs/build-5.jpg" alt="Timber roof frame being set on log walls" loading="lazy" width="640" height="480"></a>
-          <a class="shot" data-cat="home" href="images/gallery/home-11.jpg"><img src="images/gallery/thumbs/home-11.jpg" alt="Large log home with timber entry and attached garage" loading="lazy" width="640" height="637"></a>
-          <a class="shot" data-cat="interior" href="images/gallery/interior-6.jpg"><img src="images/gallery/thumbs/interior-6.jpg" alt="Log home entry with double wooden doors" loading="lazy" width="480" height="640"></a>
-          <a class="shot" data-cat="build" href="images/gallery/build-6.jpg"><img src="images/gallery/thumbs/build-6.jpg" alt="Log shell being assembled inside the shop" loading="lazy" width="640" height="360"></a>
-          <a class="shot" data-cat="home" href="images/gallery/home-10.jpg"><img src="images/gallery/thumbs/home-10.jpg" alt="Log cabin at the end of a gravel lane among spruce trees" loading="lazy" width="640" height="480"></a>
-          <a class="shot" data-cat="build" href="images/gallery/build-9.jpg"><img src="images/gallery/thumbs/build-9.jpg" alt="Two builders standing in front of a log home build with a crane" loading="lazy" width="640" height="480"></a>
-          <a class="shot" data-cat="interior" href="images/gallery/interior-7.jpg"><img src="images/gallery/thumbs/interior-7.jpg" alt="Cozy log living room with wood stove" loading="lazy" width="480" height="640"></a>
-          <a class="shot" data-cat="home" href="images/gallery/home-12.jpg"><img src="images/gallery/thumbs/home-12.jpg" alt="Log home with steep timber gable at dusk" loading="lazy" width="640" height="310"></a>
-          <a class="shot" data-cat="build" href="images/gallery/build-10.jpg"><img src="images/gallery/thumbs/build-10.jpg" alt="Log walls stacked at the In Scribe construction yard" loading="lazy" width="640" height="288"></a>
-          <a class="shot" data-cat="build" href="images/gallery/build-12.jpg"><img src="images/gallery/thumbs/build-12.jpg" alt="Logging truck loaded with long logs" loading="lazy" width="640" height="360"></a>
+        <div class="planx">
+          <div class="planx__tabs" role="tablist" aria-label="Plans">
+            <button type="button" role="tab" class="ptab is-active" aria-selected="true" data-plan="0"><b>The Classic</b><span>20' × 25'</span></button>
+            <button type="button" role="tab" class="ptab" aria-selected="false" data-plan="1"><b>Hybrid Log Cabin</b><span>22' × 26'</span></button>
+            <button type="button" role="tab" class="ptab" aria-selected="false" data-plan="2"><b>The Classic II</b><span>31' × 37'</span></button>
+            <button type="button" role="tab" class="ptab" aria-selected="false" data-plan="3"><b>The Ranch</b><span>68' × 40'</span></button>
+          </div>
+
+          <div class="planx__body">
+            <div class="footprint" aria-hidden="true">
+              <div class="footprint__grid">
+                <span class="fp fp--ghost" style="--w:20;--d:25"></span>
+                <span class="fp fp--ghost" style="--w:22;--d:26"></span>
+                <span class="fp fp--ghost" style="--w:31;--d:37"></span>
+                <span class="fp fp--ghost" style="--w:68;--d:40"></span>
+                <span class="fp fp--active" style="--w:20;--d:25"><i class="fp__w">20'</i><i class="fp__d">25'</i></span>
+              </div>
+              <p class="footprint__legend"><span class="sq"></span>1 square = 5 ft</p>
+            </div>
+
+            <div class="planx__info">
+              <p class="planx__name">The Classic</p>
+              <dl class="planx__stats">
+                <div><dt>Bedrooms</dt><dd data-stat="bed">1</dd></div>
+                <div><dt>Bathrooms</dt><dd data-stat="bath">1</dd></div>
+                <div><dt>Sq ft</dt><dd data-stat="sqft">500</dd></div>
+                <div><dt>Loft</dt><dd data-stat="loft">300</dd></div>
+              </dl>
+              <p class="planx__extra">With a 10' × 20' covered deck</p>
+              <a class="planx__sheet" href="images/plans/the-classic.jpg" data-caption="The Classic — 20' × 25'">
+                <img src="images/plans/the-classic.jpg" alt="The Classic plan sheet with elevation and floor plans" loading="lazy" width="885" height="1100">
+                <span>View floor plan</span>
+              </a>
+            </div>
+          </div>
         </div>
+        <noscript><p class="noscript">Plans: The Classic (20' × 25', 1 bed, 1 bath, 500 sqft + 300 sqft loft, 10' × 20' covered deck) · Hybrid Log Cabin (22' × 26', 1 bed, 1 bath, 572 sqft + 266 sqft loft) · The Classic II (31' × 37', 3 bed, 2 bath, 1147 sqft + 650 sqft loft) · The Ranch (68' × 40', 5 bed, 5 bath, 2000 sqft, walk-out basement &amp; wrap-around deck).</p></noscript>
       </div>
     </section>
 
-    <!-- ============ INSTAGRAM BAND ============ -->
-    <section class="insta" aria-label="Follow on Instagram">
-      <div class="container insta__inner reveal">
+    <!-- ============ 06 GALLERY (drag rail) ============ -->
+    <section class="gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="wrap gallery__head">
         <div>
-          <p class="insta__k">Follow our builds</p>
-          <p class="insta__v">@inscribeloghomes</p>
+          <p class="index index--light"><b>06</b> See Our Work</p>
+          <h2 id="gallery-title" class="h2 h2--light">Homes enjoyed by generations.</h2>
         </div>
-        <a class="btn btn--light btn--lg" href="https://www.instagram.com/inscribeloghomes/" target="_blank" rel="noopener">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
-          Instagram
-        </a>
+        <div class="gallery__controls">
+          <div class="chips" role="group" aria-label="Filter photos">
+            <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">All <sup>30</sup></button>
+            <button type="button" class="chip" data-filter="home" aria-pressed="false">Homes <sup>12</sup></button>
+            <button type="button" class="chip" data-filter="interior" aria-pressed="false">Interiors <sup>7</sup></button>
+            <button type="button" class="chip" data-filter="build" aria-pressed="false">Build Site <sup>11</sup></button>
+          </div>
+          <div class="rail-nav">
+            <button type="button" class="rail-btn" data-dir="-1" aria-label="Scroll photos left"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <button type="button" class="rail-btn" data-dir="1" aria-label="Scroll photos right"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="rail" id="rail" tabindex="0" aria-label="Photo gallery, scroll sideways">
+        <a class="frame" data-cat="home" href="images/gallery/home-1.jpg"><img src="images/gallery/thumbs/home-1.jpg" alt="Two-storey log home with green metal roof among pine trees" loading="lazy" width="640" height="427"></a>
+        <a class="frame" data-cat="interior" href="images/gallery/interior-2.jpg"><img src="images/gallery/thumbs/interior-2.jpg" alt="Log home great room with exposed log trusses and a chandelier" loading="lazy" width="480" height="640"></a>
+        <a class="frame" data-cat="build" href="images/gallery/build-2.jpg"><img src="images/gallery/thumbs/build-2.jpg" alt="Log home walls and timber roof frame going up beside a garden" loading="lazy" width="640" height="480"></a>
+        <a class="frame" data-cat="home" href="images/gallery/home-2.jpg"><img src="images/gallery/thumbs/home-2.jpg" alt="Log home with timber gable and large deck on stone columns" loading="lazy" width="640" height="361"></a>
+        <a class="frame" data-cat="interior" href="images/gallery/interior-1.jpg"><img src="images/gallery/thumbs/interior-1.jpg" alt="Living room with tall windows, antler chandelier and mountain view" loading="lazy" width="640" height="426"></a>
+        <a class="frame" data-cat="build" href="images/gallery/build-11.jpg"><img src="images/gallery/thumbs/build-11.jpg" alt="Round log gazebo frame being assembled" loading="lazy" width="480" height="640"></a>
+        <a class="frame" data-cat="home" href="images/gallery/home-3.jpg"><img src="images/gallery/thumbs/home-3.jpg" alt="Log home with dark roof in a snowy pine forest" loading="lazy" width="640" height="480"></a>
+        <a class="frame" data-cat="home" href="images/gallery/home-4.jpg"><img src="images/gallery/thumbs/home-4.jpg" alt="Log cabin with timber gable and covered deck at sunset" loading="lazy" width="640" height="480"></a>
+        <a class="frame" data-cat="interior" href="images/gallery/interior-5.jpg"><img src="images/gallery/thumbs/interior-5.jpg" alt="Hand-peeled log post beside a stone fireplace" loading="lazy" width="426" height="640"></a>
+        <a class="frame" data-cat="build" href="images/gallery/build-8.jpg"><img src="images/gallery/thumbs/build-8.jpg" alt="Log home with radiating roof logs during construction" loading="lazy" width="640" height="480"></a>
+        <a class="frame" data-cat="home" href="images/gallery/home-5.jpg"><img src="images/gallery/thumbs/home-5.jpg" alt="Lakeside post and beam home with large windows" loading="lazy" width="640" height="426"></a>
+        <a class="frame" data-cat="interior" href="images/gallery/interior-3.jpg"><img src="images/gallery/thumbs/interior-3.jpg" alt="Log kitchen with skylights and timber ceiling" loading="lazy" width="480" height="640"></a>
+        <a class="frame" data-cat="build" href="images/gallery/build-4.jpg"><img src="images/gallery/thumbs/build-4.jpg" alt="Log walls with timber roof frame against a blue sky" loading="lazy" width="640" height="480"></a>
+        <a class="frame" data-cat="home" href="images/gallery/home-6.jpg"><img src="images/gallery/thumbs/home-6.jpg" alt="Log home with blue metal roof and wood deck" loading="lazy" width="640" height="370"></a>
+        <a class="frame" data-cat="home" href="images/gallery/home-7.jpg"><img src="images/gallery/thumbs/home-7.jpg" alt="Log home with green roof overlooking a forest" loading="lazy" width="640" height="426"></a>
+        <a class="frame" data-cat="build" href="images/gallery/build-7.jpg"><img src="images/gallery/thumbs/build-7.jpg" alt="Curved log staircase being lifted by crane" loading="lazy" width="640" height="426"></a>
+        <a class="frame" data-cat="interior" href="images/gallery/interior-4.jpg"><img src="images/gallery/thumbs/interior-4.jpg" alt="Log home kitchen with staircase and loft railing" loading="lazy" width="640" height="480"></a>
+        <a class="frame" data-cat="home" href="images/gallery/home-8.jpg"><img src="images/gallery/thumbs/home-8.jpg" alt="Large log home with snow on the roof in winter" loading="lazy" width="640" height="480"></a>
+        <a class="frame" data-cat="build" href="images/gallery/build-5.jpg"><img src="images/gallery/thumbs/build-5.jpg" alt="Timber roof frame being set on log walls" loading="lazy" width="640" height="480"></a>
+        <a class="frame" data-cat="home" href="images/gallery/home-9.jpg"><img src="images/gallery/thumbs/home-9.jpg" alt="Log home with shingled upper storey and covered porch" loading="lazy" width="640" height="444"></a>
+        <a class="frame" data-cat="interior" href="images/gallery/interior-6.jpg"><img src="images/gallery/thumbs/interior-6.jpg" alt="Log home entry with double wooden doors" loading="lazy" width="480" height="640"></a>
+        <a class="frame" data-cat="build" href="images/gallery/build-6.jpg"><img src="images/gallery/thumbs/build-6.jpg" alt="Log shell being assembled inside the shop" loading="lazy" width="640" height="360"></a>
+        <a class="frame" data-cat="home" href="images/gallery/home-11.jpg"><img src="images/gallery/thumbs/home-11.jpg" alt="Large log home with timber entry and attached garage" loading="lazy" width="640" height="637"></a>
+        <a class="frame" data-cat="build" href="images/gallery/build-9.jpg"><img src="images/gallery/thumbs/build-9.jpg" alt="Two builders standing in front of a log home build with a crane" loading="lazy" width="640" height="480"></a>
+        <a class="frame" data-cat="interior" href="images/gallery/interior-7.jpg"><img src="images/gallery/thumbs/interior-7.jpg" alt="Cozy log living room with wood stove" loading="lazy" width="480" height="640"></a>
+        <a class="frame" data-cat="home" href="images/gallery/home-10.jpg"><img src="images/gallery/thumbs/home-10.jpg" alt="Log cabin at the end of a gravel lane among spruce trees" loading="lazy" width="640" height="480"></a>
+        <a class="frame" data-cat="build" href="images/gallery/build-3.jpg"><img src="images/gallery/thumbs/build-3.jpg" alt="Log walls and roof beams under construction at the yard" loading="lazy" width="640" height="480"></a>
+        <a class="frame" data-cat="home" href="images/gallery/home-12.jpg"><img src="images/gallery/thumbs/home-12.jpg" alt="Log home with steep timber gable at dusk" loading="lazy" width="640" height="310"></a>
+        <a class="frame" data-cat="build" href="images/gallery/build-10.jpg"><img src="images/gallery/thumbs/build-10.jpg" alt="Log walls stacked at the In Scribe construction yard" loading="lazy" width="640" height="288"></a>
+        <a class="frame" data-cat="build" href="images/gallery/build-12.jpg"><img src="images/gallery/thumbs/build-12.jpg" alt="Logging truck loaded with long logs" loading="lazy" width="640" height="360"></a>
+      </div>
+      <div class="wrap rail-foot">
+        <div class="rail-progress" aria-hidden="true"><i></i></div>
+        <p class="rail-hint"><span class="drag-dot"></span>Drag or swipe · tap a photo to open</p>
       </div>
     </section>
 
-    <!-- ============ CONTACT ============ -->
-    <section class="cta" id="contact" aria-labelledby="cta-title">
-      <div class="rings rings--cta" aria-hidden="true"></div>
-      <div class="container cta__grid">
-        <div class="cta__text reveal">
-          <p class="eyebrow eyebrow--light">Connect With Us</p>
-          <h2 class="cta__title" id="cta-title">Ready to bring your dream log home to <em>life?</em></h2>
-          <p class="cta__lead">Contact In Scribe Log Homes today to start planning your custom project. Let our craftsmanship and passion for quality create a home that will be cherished for generations.</p>
-          <ul class="contact-list">
-            <li><span class="contact-list__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
-              <div><small>Call</small><a href="tel:+14038459360">403-845-9360</a></div></li>
-            <li><span class="contact-list__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
-              <div><small>Email</small><a href="mailto:info@inscribeloghomes.net">info@inscribeloghomes.net</a></div></li>
-            <li><span class="contact-list__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-              <div><small>Yard</small><span>RR4 Site 143 Comp 18<br>Rocky Mountain House, AB T4T 2A4</span></div></li>
-            <li><span class="contact-list__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
-              <div><small>Hours</small><span>Monday – Friday, 9–5</span></div></li>
+    <!-- ============ 07 START YOUR BUILD (multi-step planner) ============ -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact__grid">
+        <div class="contact__side">
+          <p class="index"><b>07</b> Start Your Build</p>
+          <h2 id="contact-title" class="h2">Ready to bring your dream log home to <em class="scribed">life?<svg viewBox="0 0 240 14" preserveAspectRatio="none" aria-hidden="true"><use href="#scribe"/></svg></em></h2>
+          <p class="contact__lead">Answer four quick questions and we’ll have what we need to start planning your custom project with you.</p>
+          <ul class="direct">
+            <li><span>Call</span><a href="tel:+14038459360">403-845-9360</a></li>
+            <li><span>Email</span><a href="mailto:info@inscribeloghomes.net">info@inscribeloghomes.net</a></li>
+            <li><span>Yard</span><a href="https://www.google.com/maps/search/?api=1&amp;query=RR4+Site+143+Comp+18+Rocky+Mountain+House+AB+T4T+2A4" target="_blank" rel="noopener">RR4 Site 143 Comp 18,<br>Rocky Mountain House, AB T4T 2A4 ↗</a></li>
+            <li><span>Hours</span><b>Monday – Friday, 9–5</b></li>
           </ul>
         </div>
 
-        <div class="form-card reveal" style="--d:.1s">
-          <form class="quote-form" id="quote-form" novalidate>
-            <h3 class="form-card__title">Start your project</h3>
-            <div class="field-row">
-              <div class="field"><label for="f-name">Full name</label><input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Your name"></div>
-              <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required placeholder="(403) 000-0000"></div>
-            </div>
-            <div class="field-row">
-              <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
-              <div class="field"><label for="f-location">Build location</label><input id="f-location" name="location" type="text" placeholder="Town or area"></div>
-            </div>
-            <div class="field">
-              <label for="f-type">What would you like built?</label>
-              <div class="select">
-                <select id="f-type" name="type" required>
-                  <option value="" disabled selected>Select a project type</option>
-                  <option>Full Scribe Log Home</option>
-                  <option>Post and Beam</option>
-                  <option>Timber Frame Structure</option>
-                  <option>Gazebo</option>
-                  <option>Log Stairs &amp; Railings</option>
-                  <option>Custom Log / Timber Furniture</option>
-                  <option>Bandsaw Mill &amp; Custom Cutting</option>
-                  <option>Not sure yet</option>
-                </select>
+        <div class="planner" data-step="1">
+          <div class="planner__top">
+            <p class="planner__step">Step <b class="planner__now">1</b> of 4</p>
+            <div class="planner__bar"><i></i></div>
+          </div>
+
+          <form id="planner" novalidate>
+            <fieldset class="pstep is-active" data-step="1">
+              <legend>What would you like built?</legend>
+              <div class="tiles">
+                <label class="tile"><input type="radio" name="build" value="Full Scribe Log Home" required><img src="images/services/log-homes.jpg" alt="" loading="lazy"><span>Log Home</span></label>
+                <label class="tile"><input type="radio" name="build" value="Post & Beam"><img src="images/services/post-and-beam.jpg" alt="" loading="lazy"><span>Post &amp; Beam</span></label>
+                <label class="tile"><input type="radio" name="build" value="Timber Frame"><img src="images/services/timber-frame.jpg" alt="" loading="lazy"><span>Timber Frame</span></label>
+                <label class="tile"><input type="radio" name="build" value="Gazebo"><img src="images/services/gazebos.jpg" alt="" loading="lazy"><span>Gazebo</span></label>
+                <label class="tile"><input type="radio" name="build" value="Log Stairs & Railings"><img src="images/services/stairs-railings.jpg" alt="" loading="lazy"><span>Stairs &amp; Railings</span></label>
+                <label class="tile"><input type="radio" name="build" value="Custom Furniture"><img src="images/services/furniture.jpg" alt="" loading="lazy"><span>Furniture</span></label>
+                <label class="tile"><input type="radio" name="build" value="Custom Cutting"><img src="images/services/sawmill.jpg" alt="" loading="lazy"><span>Custom Cutting</span></label>
+                <label class="tile tile--text"><input type="radio" name="build" value="Not sure yet"><span>Not sure yet</span></label>
               </div>
+            </fieldset>
+
+            <fieldset class="pstep" data-step="2">
+              <legend>Where are you starting from?</legend>
+              <div class="opts">
+                <label class="opt"><input type="radio" name="start" value="The Classic" required><span><b>The Classic</b><i>20' × 25' · 1 bed</i></span></label>
+                <label class="opt"><input type="radio" name="start" value="Hybrid Log Cabin"><span><b>Hybrid Log Cabin</b><i>22' × 26' · 1 bed</i></span></label>
+                <label class="opt"><input type="radio" name="start" value="The Classic II"><span><b>The Classic II</b><i>31' × 37' · 3 bed</i></span></label>
+                <label class="opt"><input type="radio" name="start" value="The Ranch"><span><b>The Ranch</b><i>68' × 40' · 5 bed</i></span></label>
+                <label class="opt opt--wide"><input type="radio" name="start" value="Fully custom design"><span><b>A fully custom design</b><i>Work with us and your architect</i></span></label>
+                <label class="opt opt--wide"><input type="radio" name="start" value="Not sure yet"><span><b>Not sure yet</b><i>Let’s talk it through</i></span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="pstep" data-step="3">
+              <legend>Where is the build going?</legend>
+              <div class="field"><label for="p-loc">Town or area</label><input id="p-loc" name="location" type="text" placeholder="e.g. near Sylvan Lake" required></div>
+              <p class="label">When are you hoping to build?</p>
+              <div class="seg">
+                <label><input type="radio" name="when" value="As soon as possible" required><span>ASAP</span></label>
+                <label><input type="radio" name="when" value="This year"><span>This year</span></label>
+                <label><input type="radio" name="when" value="Next year"><span>Next year</span></label>
+                <label><input type="radio" name="when" value="Just exploring"><span>Exploring</span></label>
+              </div>
+              <p class="label">Do you have permits or an architect yet?</p>
+              <div class="seg seg--2">
+                <label><input type="radio" name="ready" value="Yes, we have a plan"><span>Yes, we have a plan</span></label>
+                <label><input type="radio" name="ready" value="Not yet"><span>Not yet</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="pstep" data-step="4">
+              <legend>How do we reach you?</legend>
+              <div class="field-row">
+                <div class="field"><label for="p-name">Name</label><input id="p-name" name="name" type="text" autocomplete="name" required></div>
+                <div class="field"><label for="p-phone">Phone</label><input id="p-phone" name="phone" type="tel" autocomplete="tel" required></div>
+              </div>
+              <div class="field"><label for="p-email">Email</label><input id="p-email" name="email" type="email" autocomplete="email" required></div>
+              <div class="field"><label for="p-notes">Anything else? <small>(optional)</small></label><textarea id="p-notes" name="notes" rows="3" placeholder="Size, features, timeline…"></textarea></div>
+            </fieldset>
+
+            <div class="planner__nav">
+              <button type="button" class="btn btn--line" data-back hidden>Back</button>
+              <button type="button" class="btn btn--red" data-next>Next <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+              <button type="submit" class="btn btn--red" data-submit hidden>Send to In Scribe</button>
             </div>
-            <div class="field"><label for="f-details">Tell us about your dream build</label><textarea id="f-details" name="details" rows="4" placeholder="Size, plan you like, timeline, anything else…"></textarea></div>
-            <button class="btn btn--red btn--lg btn--block" type="submit">Send Request
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </button>
-            <p class="form-note">Prefer to talk? Call <a href="tel:+14038459360">403-845-9360</a></p>
+            <p class="planner__error" role="alert"></p>
           </form>
-          <div class="form-success" id="form-success" hidden tabindex="-1">
-            <div class="form-success__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
-            <h3>Thank you!</h3>
-            <p>Your request has been received. We’ll be in touch soon to talk about your build.</p>
-            <button type="button" class="btn btn--outline" id="form-reset">Send another request</button>
+
+          <div class="planner__done" hidden tabindex="-1">
+            <p class="h3">Thanks — we’ve got it.</p>
+            <p>Here’s what you sent. Travis or Amber will be in touch soon to talk about your build.</p>
+            <dl class="summary"></dl>
+            <button type="button" class="btn btn--line" data-restart>Start over</button>
           </div>
         </div>
       </div>
@@ -466,45 +526,21 @@
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
-    <div class="container footer__grid">
-      <div class="footer__brand">
-        <a href="#home" class="footer__logo" aria-label="In Scribe Log Homes — back to top"><img src="images/logo.png" alt="In Scribe Log Homes" width="300" height="221" loading="lazy"></a>
-        <p>Build your dream log structure with In Scribe, and enjoy the process.</p>
-        <div class="socials">
-          <a href="https://www.instagram.com/inscribeloghomes/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
-          <a href="https://www.linkedin.com/in/travis-johnson-45b13a179/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+    <div class="wrap">
+      <div class="footer__top">
+        <p class="footer__line">Build your dream log structure with In Scribe, <em>and enjoy the process.</em></p>
+        <a href="#contact" class="btn btn--red btn--lg">Start Your Build</a>
+      </div>
+      <div class="footer__grid">
+        <div>
+          <img class="footer__logo" src="images/logo.png" alt="In Scribe Log Homes" width="300" height="221" loading="lazy">
         </div>
+        <div class="footer__col"><h3>Explore</h3><a href="#about">The Family</a><a href="#craft">The Craft</a><a href="#services">What We Build</a><a href="#process">Process</a><a href="#plans">Plans</a><a href="#gallery">Gallery</a></div>
+        <div class="footer__col"><h3>Contact</h3><a href="tel:+14038459360">403-845-9360</a><a href="mailto:info@inscribeloghomes.net">info@inscribeloghomes.net</a><span>RR4 Site 143 Comp 18<br>Rocky Mountain House, AB T4T 2A4</span><span>Monday – Friday, 9–5</span></div>
+        <div class="footer__col"><h3>Follow</h3><a href="https://www.instagram.com/inscribeloghomes/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://www.linkedin.com/in/travis-johnson-45b13a179/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
       </div>
-      <nav class="footer__col" aria-label="Quick links">
-        <h3>Explore</h3>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#process">Build Process</a>
-        <a href="#plans">Plans</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="footer__col">
-        <h3>Services</h3>
-        <a href="#services">Full Scribe Log Homes</a>
-        <a href="#services">Post and Beam</a>
-        <a href="#services">Timber Frame</a>
-        <a href="#services">Gazebos</a>
-        <a href="#services">Log Stairs &amp; Railings</a>
-        <a href="#services">Custom Furniture</a>
-        <a href="#services">Custom Cutting</a>
-      </div>
-      <div class="footer__col">
-        <h3>Contact</h3>
-        <a href="tel:+14038459360">403-845-9360</a>
-        <a href="mailto:info@inscribeloghomes.net">info@inscribeloghomes.net</a>
-        <span>RR4 Site 143 Comp 18<br>Rocky Mountain House, AB T4T 2A4</span>
-        <span>Monday – Friday, 9–5</span>
-      </div>
-    </div>
-    <div class="container footer__bottom">
-      <p>© 2026 In Scribe Log Homes. All rights reserved.</p>
-      <a href="#home" class="footer__top">Back to top <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+      <p class="footer__word" aria-hidden="true">IN SCRIBE</p>
+      <div class="footer__bottom"><p>© 2026 In Scribe Log Homes. All rights reserved.</p><a href="#home">Back to top ↑</a></div>
     </div>
   </footer>
 
@@ -512,16 +548,13 @@
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
     <button class="lightbox__close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
     <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
-    <figure class="lightbox__figure">
-      <img class="lightbox__img" alt="">
-      <figcaption class="lightbox__caption"></figcaption>
-    </figure>
+    <figure class="lightbox__figure"><img class="lightbox__img" alt=""><figcaption class="lightbox__caption"></figcaption></figure>
     <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
   </div>
 
   <a class="call-now" href="tel:+14038459360" aria-label="Call In Scribe Log Homes: 403-845-9360">
     <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-    Call Now
+    Call
   </a>
 
   <script src="script.js" defer></script>
