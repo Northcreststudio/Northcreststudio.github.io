@@ -172,9 +172,11 @@
       var li = document.createElement('li');
       var meta = [t.time, t.price].filter(Boolean).join(' · ');
       li.innerHTML =
+        '<img class="rec__img" alt="" width="72" height="72">' +
         '<p class="rec__name"></p>' +
         '<p class="rec__meta"><b></b> · <span class="rec__mt"></span> · <a href="#t-' + id + '" class="rec__more">Details</a></p>' +
         '<a class="btn btn--ink rec__book" target="_blank" rel="noopener">Book<span class="sr"> (opens Square booking)</span></a>';
+      $('.rec__img', li).src = t.img;
       $('.rec__name', li).textContent = t.name;
       $('.rec__meta b', li).textContent = t.who === 'm' ? 'Dr. Mankaeva' : 'Violeta';
       $('.rec__mt', li).textContent = meta;

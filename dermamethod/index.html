@@ -23,6 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700;800&family=Wix+Madefor+Text:ital,wght@0,400;0,500;0,600;1,400&family=Syncopate:wght@400;700&display=swap">
+  <link rel="preload" as="image" href="images/hero.webp" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add('js');</script>
   <script type="application/ld+json">
@@ -84,8 +85,7 @@
           </aside>
         </div>
         <figure class="hero__photo">
-          <img src="images/violeta.jpg" alt="Violeta, Advanced Clinical Esthetician, at her desk in the DermaMethod clinic" width="900" height="1207" fetchpriority="high">
-          <figcaption><span>Violeta</span> Advanced Clinical Esthetician</figcaption>
+          <img src="images/hero.webp" alt="Smiling woman with glowing skin" width="1300" height="1073" fetchpriority="high">
         </figure>
       </div>
     </section>
@@ -93,9 +93,12 @@
     <!-- ============ BRAND LINE ============ -->
     <section class="line" aria-label="Our approach">
       <img class="line__mark" src="images/emblem.png" alt="" width="400" height="363" loading="lazy">
-      <div class="wrap">
-        <p class="line__text" data-reveal>Beautiful skin begins with the <em>right method.</em></p>
-        <p class="line__note" data-reveal><span>All facials include a complimentary skin analysis.</span></p>
+      <div class="wrap line__grid">
+        <div>
+          <p class="line__text" data-reveal>Beautiful skin begins with the <em>right method.</em></p>
+          <p class="line__note" data-reveal><span>All facials include a complimentary skin analysis.</span></p>
+        </div>
+        <figure class="line__photo" data-reveal><img src="images/portrait.jpg" alt="Woman with clear, natural-looking skin" width="900" height="857" loading="lazy"></figure>
       </div>
     </section>
 
@@ -169,9 +172,12 @@
               </button>
               <div class="item__body" id="d-deep-extraction" role="region" aria-label="Deep Extraction Facial + Enzyme Peel">
                 <div class="item__inner">
+                  <img class="item__img" src="images/treatments/deep-extraction.jpg" alt="" width="720" height="540" loading="lazy">
+                  <div class="item__text">
                   <p>Targeted deep-cleansing facial to clear congested pores, blackheads and milia.</p>
                   <p class="item__by">With Violeta · includes a complimentary skin analysis</p>
                   <a class="link-book" href="https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/XFJRQYA3VZSTU6AC2M2X3AJZ" target="_blank" rel="noopener">Book this treatment<span class="sr"> (opens Square booking)</span> <span aria-hidden="true">→</span></a>
+                  </div>
                 </div>
               </div>
             </li>
@@ -184,9 +190,12 @@
               </button>
               <div class="item__body" id="d-anti-aging-deluxe" role="region" aria-label="Anti-Aging Deluxe + Lifting Massage">
                 <div class="item__inner">
+                  <img class="item__img" src="images/treatments/anti-aging-deluxe.jpg" alt="" width="720" height="540" loading="lazy">
+                  <div class="item__text">
                   <p>Advanced skincare actives, multi-layer facial massage and LED light therapy.</p>
                   <p class="item__by">With Violeta · includes a complimentary skin analysis</p>
                   <a class="link-book" href="https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/XQJOKEAONOQRGQSSRM3W3WEG" target="_blank" rel="noopener">Book this treatment<span class="sr"> (opens Square booking)</span> <span aria-hidden="true">→</span></a>
+                  </div>
                 </div>
               </div>
             </li>
@@ -199,9 +208,12 @@
               </button>
               <div class="item__body" id="d-acne" role="region" aria-label="Acne Treatment + High Frequency">
                 <div class="item__inner">
+                  <img class="item__img" src="images/treatments/acne.jpg" alt="" width="720" height="540" loading="lazy">
+                  <div class="item__text">
                   <p>For acne-prone skin; high-frequency therapy helps reduce bacteria and inflammation.</p>
                   <p class="item__by">With Violeta · includes a complimentary skin analysis</p>
                   <a class="link-book" href="https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/HWK7D53B5TVA5TMWI6RLI46G" target="_blank" rel="noopener">Book this treatment<span class="sr"> (opens Square booking)</span> <span aria-hidden="true">→</span></a>
+                  </div>
                 </div>
               </div>
             </li>
@@ -214,9 +226,12 @@
               </button>
               <div class="item__body" id="d-european" role="region" aria-label="European Facial + Lymphatic Drainage Massage">
                 <div class="item__inner">
+                  <img class="item__img" src="images/treatments/european.jpg" alt="" width="720" height="540" loading="lazy">
+                  <div class="item__text">
                   <p>European-style facial with lymphatic lift massage to promote circulation.</p>
                   <p class="item__by">With Violeta · includes a complimentary skin analysis</p>
                   <a class="link-book" href="https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/CD4KN4CYBYOWJZFWHYSKW7XW" target="_blank" rel="noopener">Book this treatment<span class="sr"> (opens Square booking)</span> <span aria-hidden="true">→</span></a>
+                  </div>
                 </div>
               </div>
             </li>
@@ -229,9 +244,12 @@
               </button>
               <div class="item__body" id="d-relaxation" role="region" aria-label="Custom Relaxation Facial">
                 <div class="item__inner">
+                  <img class="item__img" src="images/treatments/relaxation.jpg" alt="" width="720" height="540" loading="lazy">
+                  <div class="item__text">
                   <p>Deeply restorative facial customized to your skin type and needs.</p>
                   <p class="item__by">With Violeta · includes a complimentary skin analysis</p>
                   <a class="link-book" href="https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/MNDMIAJGSVEQSOOS3E337XBO" target="_blank" rel="noopener">Book this treatment<span class="sr"> (opens Square booking)</span> <span aria-hidden="true">→</span></a>
+                  </div>
                 </div>
               </div>
             </li>
@@ -249,9 +267,12 @@
               </button>
               <div class="item__body" id="d-dermaplaning" role="region" aria-label="Dermaplaning + Anti-Aging Mask">
                 <div class="item__inner">
+                  <img class="item__img" src="images/treatments/dermaplaning.jpg" alt="" width="720" height="540" loading="lazy">
+                  <div class="item__text">
                   <p>Manual exfoliation removes dead skin and vellus hair, then a restorative collagen mask.</p>
                   <p class="item__by">With Violeta</p>
                   <a class="link-book" href="https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/A47N3GWRLK43IM7TXA6JTYMU" target="_blank" rel="noopener">Book this treatment<span class="sr"> (opens Square booking)</span> <span aria-hidden="true">→</span></a>
+                  </div>
                 </div>
               </div>
             </li>
@@ -264,9 +285,12 @@
               </button>
               <div class="item__body" id="d-microderm-led" role="region" aria-label="Microdermabrasion + Anti-Aging Mask &amp; LED">
                 <div class="item__inner">
+                  <img class="item__img" src="images/treatments/microderm-led.jpg" alt="" width="720" height="540" loading="lazy">
+                  <div class="item__text">
                   <p>Crystal or diamond-tip resurfacing to refine texture and the look of hyperpigmentation.</p>
                   <p class="item__by">With Violeta</p>
                   <a class="link-book" href="https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/UBRZP23GN6YIUIYOP4KFDABG" target="_blank" rel="noopener">Book this treatment<span class="sr"> (opens Square booking)</span> <span aria-hidden="true">→</span></a>
+                  </div>
                 </div>
               </div>
             </li>
@@ -279,9 +303,12 @@
               </button>
               <div class="item__body" id="d-microderm-dermaplaning" role="region" aria-label="Microdermabrasion + Dermaplaning">
                 <div class="item__inner">
+                  <img class="item__img" src="images/treatments/microderm-dermaplaning.jpg" alt="" width="720" height="540" loading="lazy">
+                  <div class="item__text">
                   <p>Combined for enhanced exfoliation and resurfacing.</p>
                   <p class="item__by">With Violeta</p>
                   <a class="link-book" href="https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/GKWDIN7X5A23ZY3V4M5NXVYU" target="_blank" rel="noopener">Book this treatment<span class="sr"> (opens Square booking)</span> <span aria-hidden="true">→</span></a>
+                  </div>
                 </div>
               </div>
             </li>
@@ -294,9 +321,12 @@
               </button>
               <div class="item__body" id="d-dermaneedling" role="region" aria-label="Dermaneedling + Customized Serum">
                 <div class="item__inner">
+                  <img class="item__img" src="images/treatments/dermaneedling.jpg" alt="" width="720" height="540" loading="lazy">
+                  <div class="item__text">
                   <p>Collagen-stimulating treatment to refine texture and improve tone.</p>
                   <p class="item__by">With Violeta</p>
                   <a class="link-book" href="https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/IHUHGECDYSJVR7IE2Z5535TR" target="_blank" rel="noopener">Book this treatment<span class="sr"> (opens Square booking)</span> <span aria-hidden="true">→</span></a>
+                  </div>
                 </div>
               </div>
             </li>
@@ -309,9 +339,12 @@
               </button>
               <div class="item__body" id="d-stayve" role="region" aria-label="Stayve Seanergy Peel">
                 <div class="item__inner">
+                  <img class="item__img" src="images/treatments/stayve.jpg" alt="" width="720" height="540" loading="lazy">
+                  <div class="item__text">
                   <p>Advanced resurfacing for texture, brightness and firmness.</p>
                   <p class="item__by">With Violeta</p>
                   <a class="link-book" href="https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/TJ6POY7HX2ISXIFDBJO3UFDI" target="_blank" rel="noopener">Book this treatment<span class="sr"> (opens Square booking)</span> <span aria-hidden="true">→</span></a>
+                  </div>
                 </div>
               </div>
             </li>
@@ -329,9 +362,12 @@
               </button>
               <div class="item__body" id="d-skinvive" role="region" aria-label="SKINVIVE™ by Juvéderm®">
                 <div class="item__inner">
+                  <img class="item__img" src="images/treatments/skinvive.jpg" alt="" width="720" height="540" loading="lazy">
+                  <div class="item__text">
                   <p>Injectable skin-quality treatment for hydration, smoothness and radiance.</p>
                   <p class="item__by">With Dr. Mankaeva</p>
                   <a class="link-book" href="https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/EISOSKGP7JPE6P2S6QPBDSCB" target="_blank" rel="noopener">Book this treatment<span class="sr"> (opens Square booking)</span> <span aria-hidden="true">→</span></a>
+                  </div>
                 </div>
               </div>
             </li>
@@ -344,9 +380,12 @@
               </button>
               <div class="item__body" id="d-neuromodulator" role="region" aria-label="Neuromodulator Treatment">
                 <div class="item__inner">
+                  <img class="item__img" src="images/treatments/neuromodulator.jpg" alt="" width="720" height="540" loading="lazy">
+                  <div class="item__text">
                   <p>Smooths expression lines for a refreshed, natural-looking result.</p>
                   <p class="item__by">With Dr. Mankaeva</p>
                   <a class="link-book" href="https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/2JKB44NDANHDBJWKY2B65CJI" target="_blank" rel="noopener">Book this treatment<span class="sr"> (opens Square booking)</span> <span aria-hidden="true">→</span></a>
+                  </div>
                 </div>
               </div>
             </li>
@@ -359,9 +398,12 @@
               </button>
               <div class="item__body" id="d-fillers" role="region" aria-label="Hyaluronic Acid Dermal Fillers">
                 <div class="item__inner">
+                  <img class="item__img" src="images/treatments/fillers.jpg" alt="" width="720" height="540" loading="lazy">
+                  <div class="item__text">
                   <p>Facial contouring and rejuvenation with premium HA fillers, including Juvéderm®.</p>
                   <p class="item__by">With Dr. Mankaeva</p>
                   <a class="link-book" href="https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/JWVLMQFWTV2AD6LZOF3X5TL7" target="_blank" rel="noopener">Book this treatment<span class="sr"> (opens Square booking)</span> <span aria-hidden="true">→</span></a>
+                  </div>
                 </div>
               </div>
             </li>
@@ -374,9 +416,12 @@
               </button>
               <div class="item__body" id="d-harmonyca" role="region" aria-label="HArmonyCa™ by Juvéderm®">
                 <div class="item__inner">
+                  <img class="item__img" src="images/treatments/harmonyca.jpg" alt="" width="720" height="540" loading="lazy">
+                  <div class="item__text">
                   <p>Dual-action injectable to restore volume, improve firmness and enhance natural contours.</p>
                   <p class="item__by">With Dr. Mankaeva</p>
                   <a class="link-book" href="https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/QZ2TVOWTYQAF5K7QP2ON22U5" target="_blank" rel="noopener">Book this treatment<span class="sr"> (opens Square booking)</span> <span aria-hidden="true">→</span></a>
+                  </div>
                 </div>
               </div>
             </li>
@@ -394,9 +439,12 @@
               </button>
               <div class="item__body" id="d-back" role="region" aria-label="Back Dermal Treatment">
                 <div class="item__inner">
+                  <img class="item__img" src="images/treatments/back.jpg" alt="" width="720" height="540" loading="lazy">
+                  <div class="item__text">
                   <p>Deep cleansing, exfoliation and targeted care for the back.</p>
                   <p class="item__by">With Violeta</p>
                   <a class="link-book" href="https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/HED66T4A4SKPIC2H52KWS3J2" target="_blank" rel="noopener">Book this treatment<span class="sr"> (opens Square booking)</span> <span aria-hidden="true">→</span></a>
+                  </div>
                 </div>
               </div>
             </li>
@@ -409,9 +457,12 @@
               </button>
               <div class="item__body" id="d-scalp" role="region" aria-label="Scalp Dermaneedling">
                 <div class="item__inner">
+                  <img class="item__img" src="images/treatments/scalp.jpg" alt="" width="720" height="540" loading="lazy">
+                  <div class="item__text">
                   <p>Microneedling for the scalp to stimulate and promote circulation.</p>
                   <p class="item__by">With Violeta</p>
                   <a class="link-book" href="https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/SRP2WKL3WPW577MT5B6TWLRL" target="_blank" rel="noopener">Book this treatment<span class="sr"> (opens Square booking)</span> <span aria-hidden="true">→</span></a>
+                  </div>
                 </div>
               </div>
             </li>
@@ -424,9 +475,12 @@
               </button>
               <div class="item__body" id="d-brows" role="region" aria-label="Brow Tinting">
                 <div class="item__inner">
+                  <img class="item__img" src="images/treatments/brows.jpg" alt="" width="720" height="540" loading="lazy">
+                  <div class="item__text">
                   <p>Adds definition for a fuller, polished look.</p>
                   <p class="item__by">With Violeta</p>
                   <a class="link-book" href="https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/E5Y6K2NGOSFE2KRW2X7TKW6Z" target="_blank" rel="noopener">Book this treatment<span class="sr"> (opens Square booking)</span> <span aria-hidden="true">→</span></a>
+                  </div>
                 </div>
               </div>
             </li>
@@ -439,9 +493,12 @@
               </button>
               <div class="item__body" id="d-waxing" role="region" aria-label="Waxing Services">
                 <div class="item__inner">
+                  <img class="item__img" src="images/treatments/waxing.jpg" alt="" width="720" height="540" loading="lazy">
+                  <div class="item__text">
                   <p>Multiple areas including underarms, upper lip and brazilian.</p>
                   <p class="item__by">With Violeta</p>
                   <a class="link-book" href="https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/SWDP2VY62YUDSUUI6IRCKOM4" target="_blank" rel="noopener">Book this treatment<span class="sr"> (opens Square booking)</span> <span aria-hidden="true">→</span></a>
+                  </div>
                 </div>
               </div>
             </li>
@@ -539,7 +596,7 @@
     <a class="mbar__book" href="https://app.squareup.com/appointments/book/zpwuo2y05ucfma/LCR4TSN1SSY5P/start" target="_blank" rel="noopener">Book appointment<span class="sr"> (opens Square booking)</span></a>
   </nav>
 
-  <script id="dm-data" type="application/json">{"book": "https://app.squareup.com/appointments/book/zpwuo2y05ucfma/LCR4TSN1SSY5P/start", "t": {"deep-extraction": {"name": "Deep Extraction Facial + Enzyme Peel", "time": "60 min", "price": "$190", "who": "v", "cat": "Facials", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/XFJRQYA3VZSTU6AC2M2X3AJZ"}, "anti-aging-deluxe": {"name": "Anti-Aging Deluxe + Lifting Massage", "time": "120 min", "price": "$230", "who": "v", "cat": "Facials", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/XQJOKEAONOQRGQSSRM3W3WEG"}, "acne": {"name": "Acne Treatment + High Frequency", "time": "60 min", "price": "$160", "who": "v", "cat": "Facials", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/HWK7D53B5TVA5TMWI6RLI46G"}, "european": {"name": "European Facial + Lymphatic Drainage Massage", "time": "90 min", "price": "$170", "who": "v", "cat": "Facials", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/CD4KN4CYBYOWJZFWHYSKW7XW"}, "relaxation": {"name": "Custom Relaxation Facial", "time": "60 min", "price": "$150", "who": "v", "cat": "Facials", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/MNDMIAJGSVEQSOOS3E337XBO"}, "dermaplaning": {"name": "Dermaplaning + Anti-Aging Mask", "time": "70 min", "price": "$120", "who": "v", "cat": "Resurfacing & Collagen", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/A47N3GWRLK43IM7TXA6JTYMU"}, "microderm-led": {"name": "Microdermabrasion + Anti-Aging Mask & LED", "time": "90 min", "price": "$120", "who": "v", "cat": "Resurfacing & Collagen", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/UBRZP23GN6YIUIYOP4KFDABG"}, "microderm-dermaplaning": {"name": "Microdermabrasion + Dermaplaning", "time": "120 min", "price": "$150", "who": "v", "cat": "Resurfacing & Collagen", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/GKWDIN7X5A23ZY3V4M5NXVYU"}, "dermaneedling": {"name": "Dermaneedling + Customized Serum", "time": "80 min", "price": "$300", "who": "v", "cat": "Resurfacing & Collagen", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/IHUHGECDYSJVR7IE2Z5535TR"}, "stayve": {"name": "Stayve Seanergy Peel", "time": "Face 70 min · Back 90 min", "price": "Face $160 · Back $200", "who": "v", "cat": "Resurfacing & Collagen", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/TJ6POY7HX2ISXIFDBJO3UFDI"}, "skinvive": {"name": "SKINVIVE™ by Juvéderm®", "time": "60 min", "price": "$350 / syringe", "who": "m", "cat": "Injectables", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/EISOSKGP7JPE6P2S6QPBDSCB"}, "neuromodulator": {"name": "Neuromodulator Treatment", "time": "45 min", "price": "$9 / unit", "who": "m", "cat": "Injectables", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/2JKB44NDANHDBJWKY2B65CJI"}, "fillers": {"name": "Hyaluronic Acid Dermal Fillers", "time": "60 min", "price": "$550–$700 / syringe", "who": "m", "cat": "Injectables", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/JWVLMQFWTV2AD6LZOF3X5TL7"}, "harmonyca": {"name": "HArmonyCa™ by Juvéderm®", "time": "60 min", "price": "$750 / syringe", "who": "m", "cat": "Injectables", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/QZ2TVOWTYQAF5K7QP2ON22U5"}, "back": {"name": "Back Dermal Treatment", "time": "60 min", "price": "$180", "who": "v", "cat": "Body, Scalp & Brows", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/HED66T4A4SKPIC2H52KWS3J2"}, "scalp": {"name": "Scalp Dermaneedling", "time": "", "price": "$350 / session", "who": "v", "cat": "Body, Scalp & Brows", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/SRP2WKL3WPW577MT5B6TWLRL"}, "brows": {"name": "Brow Tinting", "time": "", "price": "$35", "who": "v", "cat": "Body, Scalp & Brows", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/E5Y6K2NGOSFE2KRW2X7TKW6Z"}, "waxing": {"name": "Waxing Services", "time": "", "price": "Contact for pricing", "who": "v", "cat": "Body, Scalp & Brows", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/SWDP2VY62YUDSUUI6IRCKOM4"}}, "picks": {"congestion": ["deep-extraction", "acne", "back"], "lines": ["anti-aging-deluxe", "dermaneedling", "stayve", "neuromodulator", "harmonyca", "skinvive"], "texture": ["microderm-led", "dermaplaning", "stayve", "microderm-dermaplaning", "skinvive"], "volume": ["fillers", "harmonyca"], "relax": ["relaxation", "european", "anti-aging-deluxe"]}}</script>
+  <script id="dm-data" type="application/json">{"book": "https://app.squareup.com/appointments/book/zpwuo2y05ucfma/LCR4TSN1SSY5P/start", "t": {"deep-extraction": {"name": "Deep Extraction Facial + Enzyme Peel", "time": "60 min", "price": "$190", "who": "v", "cat": "Facials", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/XFJRQYA3VZSTU6AC2M2X3AJZ", "img": "images/treatments/deep-extraction.jpg"}, "anti-aging-deluxe": {"name": "Anti-Aging Deluxe + Lifting Massage", "time": "120 min", "price": "$230", "who": "v", "cat": "Facials", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/XQJOKEAONOQRGQSSRM3W3WEG", "img": "images/treatments/anti-aging-deluxe.jpg"}, "acne": {"name": "Acne Treatment + High Frequency", "time": "60 min", "price": "$160", "who": "v", "cat": "Facials", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/HWK7D53B5TVA5TMWI6RLI46G", "img": "images/treatments/acne.jpg"}, "european": {"name": "European Facial + Lymphatic Drainage Massage", "time": "90 min", "price": "$170", "who": "v", "cat": "Facials", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/CD4KN4CYBYOWJZFWHYSKW7XW", "img": "images/treatments/european.jpg"}, "relaxation": {"name": "Custom Relaxation Facial", "time": "60 min", "price": "$150", "who": "v", "cat": "Facials", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/MNDMIAJGSVEQSOOS3E337XBO", "img": "images/treatments/relaxation.jpg"}, "dermaplaning": {"name": "Dermaplaning + Anti-Aging Mask", "time": "70 min", "price": "$120", "who": "v", "cat": "Resurfacing & Collagen", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/A47N3GWRLK43IM7TXA6JTYMU", "img": "images/treatments/dermaplaning.jpg"}, "microderm-led": {"name": "Microdermabrasion + Anti-Aging Mask & LED", "time": "90 min", "price": "$120", "who": "v", "cat": "Resurfacing & Collagen", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/UBRZP23GN6YIUIYOP4KFDABG", "img": "images/treatments/microderm-led.jpg"}, "microderm-dermaplaning": {"name": "Microdermabrasion + Dermaplaning", "time": "120 min", "price": "$150", "who": "v", "cat": "Resurfacing & Collagen", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/GKWDIN7X5A23ZY3V4M5NXVYU", "img": "images/treatments/microderm-dermaplaning.jpg"}, "dermaneedling": {"name": "Dermaneedling + Customized Serum", "time": "80 min", "price": "$300", "who": "v", "cat": "Resurfacing & Collagen", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/IHUHGECDYSJVR7IE2Z5535TR", "img": "images/treatments/dermaneedling.jpg"}, "stayve": {"name": "Stayve Seanergy Peel", "time": "Face 70 min · Back 90 min", "price": "Face $160 · Back $200", "who": "v", "cat": "Resurfacing & Collagen", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/TJ6POY7HX2ISXIFDBJO3UFDI", "img": "images/treatments/stayve.jpg"}, "skinvive": {"name": "SKINVIVE™ by Juvéderm®", "time": "60 min", "price": "$350 / syringe", "who": "m", "cat": "Injectables", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/EISOSKGP7JPE6P2S6QPBDSCB", "img": "images/treatments/skinvive.jpg"}, "neuromodulator": {"name": "Neuromodulator Treatment", "time": "45 min", "price": "$9 / unit", "who": "m", "cat": "Injectables", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/2JKB44NDANHDBJWKY2B65CJI", "img": "images/treatments/neuromodulator.jpg"}, "fillers": {"name": "Hyaluronic Acid Dermal Fillers", "time": "60 min", "price": "$550–$700 / syringe", "who": "m", "cat": "Injectables", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/JWVLMQFWTV2AD6LZOF3X5TL7", "img": "images/treatments/fillers.jpg"}, "harmonyca": {"name": "HArmonyCa™ by Juvéderm®", "time": "60 min", "price": "$750 / syringe", "who": "m", "cat": "Injectables", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/QZ2TVOWTYQAF5K7QP2ON22U5", "img": "images/treatments/harmonyca.jpg"}, "back": {"name": "Back Dermal Treatment", "time": "60 min", "price": "$180", "who": "v", "cat": "Body, Scalp & Brows", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/HED66T4A4SKPIC2H52KWS3J2", "img": "images/treatments/back.jpg"}, "scalp": {"name": "Scalp Dermaneedling", "time": "", "price": "$350 / session", "who": "v", "cat": "Body, Scalp & Brows", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/SRP2WKL3WPW577MT5B6TWLRL", "img": "images/treatments/scalp.jpg"}, "brows": {"name": "Brow Tinting", "time": "", "price": "$35", "who": "v", "cat": "Body, Scalp & Brows", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/E5Y6K2NGOSFE2KRW2X7TKW6Z", "img": "images/treatments/brows.jpg"}, "waxing": {"name": "Waxing Services", "time": "", "price": "Contact for pricing", "who": "v", "cat": "Body, Scalp & Brows", "url": "https://book.squareup.com/appointments/zpwuo2y05ucfma/location/LCR4TSN1SSY5P/services/SWDP2VY62YUDSUUI6IRCKOM4", "img": "images/treatments/waxing.jpg"}}, "picks": {"congestion": ["deep-extraction", "acne", "back"], "lines": ["anti-aging-deluxe", "dermaneedling", "stayve", "neuromodulator", "harmonyca", "skinvive"], "texture": ["microderm-led", "dermaplaning", "stayve", "microderm-dermaplaning", "skinvive"], "volume": ["fillers", "harmonyca"], "relax": ["relaxation", "european", "anti-aging-deluxe"]}}</script>
   <script src="script.js" defer></script>
 </body>
 </html>
