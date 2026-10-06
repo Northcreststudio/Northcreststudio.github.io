@@ -78,7 +78,8 @@
     items.forEach(function (it) {
       var okCat = state.cat === 'all' || it.getAttribute('data-cat') === state.cat;
       var okCon = !state.concern || (' ' + it.getAttribute('data-concerns') + ' ').indexOf(' ' + state.concern + ' ') > -1;
-      var show = okCat && okCon;
+      var okQ = !state.q || it.textContent.toLowerCase().indexOf(state.q) > -1;
+      var show = okCat && okCon && okQ;
       it.classList.toggle('is-hidden', !show);
       if (show) shown++;
     });
@@ -102,7 +103,7 @@
     });
   });
   $('[data-clear]').addEventListener('click', function () {
-    state.concern = null;
+    state.concern = null; state.q = ''; search.value = '';
     chips.forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
     setTab('all');
   });
@@ -117,7 +118,7 @@
 
   // Open a treatment from elsewhere on the page (quiz results, practitioner links)
   function focusTreatment(id, cat) {
-    state.concern = null;
+    state.concern = null; state.q = ''; if (search) search.value = '';
     chips.forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
     setTab(cat || 'all');
     var it = document.getElementById('t-' + id);
@@ -132,6 +133,33 @@
       setTab(a.getAttribute('data-open-cat'));
       document.getElementById('menu').scrollIntoView({ behavior: still ? 'auto' : 'smooth' });
     });
+  });
+
+  /* ---------- Treatment search ---------- */
+  var search = $('[data-search]');
+  state.q = '';
+  search.addEventListener('input', function () { state.q = search.value.trim().toLowerCase(); applyFilters(); });
+
+  /* ---------- Signature rail: arrows, and cards open the menu entry ---------- */
+  var rail = $('.sigs__rail');
+  $$('.sigs__btn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var card = $('.sig', rail);
+      rail.scrollBy({ left: Number(b.getAttribute('data-dir')) * (card.offsetWidth + 24), behavior: still ? 'auto' : 'smooth' });
+    });
+  });
+  $$('[data-open]').forEach(function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); focusTreatment(a.getAttribute('data-open')); });
+  });
+
+  /* ---------- Map loads only when asked (saves ~1.7 MB) ---------- */
+  var map = $('[data-map]');
+  $('.map__load', map).addEventListener('click', function () {
+    var f = document.createElement('iframe');
+    f.title = 'Map: DERMAMETHOD Skin Clinic, 11012 Macleod Trail SE, Calgary';
+    f.src = map.getAttribute('data-map');
+    f.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+    map.innerHTML = ''; map.appendChild(f); map.classList.add('is-loaded');
   });
 
   /* ---------- Skin concern finder ---------- */
