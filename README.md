@@ -7,3 +7,4 @@ Each folder is a standalone client website preview, served by GitHub Pages at
 - `inscribe-log-homes/` — In Scribe Log Homes (Rocky Mountain House, AB), interactive version
 - `dermamethod/` — DermaMethod Skin Clinic (Calgary)
 - `heaven-stucco/` — Heaven Stucco Ltd. (Calgary)
+- `staredge-builders/` — StarEdge Builders (Calgary roofing)
