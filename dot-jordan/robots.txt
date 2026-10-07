@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://northcreststudio.github.io/dot-jordan/sitemap.xml

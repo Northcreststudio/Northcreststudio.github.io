@@ -9,3 +9,4 @@ Each folder is a standalone client website preview, served by GitHub Pages at
 - `heaven-stucco/` — Heaven Stucco Ltd. (Calgary)
 - `staredge-builders/` — StarEdge Builders (Calgary roofing)
 - `bett-n-court-roofs/` — Bett-N-Court Roofs (Airdrie roofing; stand-in stock photos, credited in the footer)
+- `dot-jordan/` — DOT Jordan (Digital Opportunity Trust Jordan, youth non-profit; "Get involved" form instead of quotes)
