@@ -8,3 +8,4 @@ Each folder is a standalone client website preview, served by GitHub Pages at
 - `dermamethod/` — DermaMethod Skin Clinic (Calgary)
 - `heaven-stucco/` — Heaven Stucco Ltd. (Calgary)
 - `staredge-builders/` — StarEdge Builders (Calgary roofing)
+- `bett-n-court-roofs/` — Bett-N-Court Roofs (Airdrie roofing; stand-in stock photos, credited in the footer)
