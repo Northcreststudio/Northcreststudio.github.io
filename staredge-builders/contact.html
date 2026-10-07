@@ -27,7 +27,8 @@
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700;800&family=Playfair+Display:wght@400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700;800&family=Playfair+Display:wght@400&display=swap"></noscript>
   <link rel="stylesheet" href="css/styles.css">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "RoofingContractor", "name": "StarEdge Builders", "description": "Calgary-based roofing company, family owned and operated. Residential asphalt shingle installation, replacement and repairs, plus gutter maintenance.", "url": "https://northcreststudio.github.io/staredge-builders/", "logo": "https://northcreststudio.github.io/staredge-builders/assets/img/staredge-logo-480.webp", "image": "https://northcreststudio.github.io/staredge-builders/assets/img/roof-valley-wide.webp", "telephone": "+1-403-926-1818", "email": "projects@staredgebuilders.com", "address": {"@type": "PostalAddress", "addressLocality": "Calgary", "addressRegion": "AB", "addressCountry": "CA"}, "areaServed": {"@type": "City", "name": "Calgary"}, "sameAs": ["https://www.instagram.com/staredge.builders/", "https://www.facebook.com/profile.php?id=61581405341908"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Roofing and gutter services", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "New Roof Installation"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Roof Replacement"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Roof Repairs"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Routine Gutter Cleaning"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Seasonal Gutter Maintenance"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Downspout cleaning and flushing"}}]}}</script>
 </head>
@@ -47,7 +48,7 @@
 
   <main id="main">
     <section class="phero" aria-labelledby="h1">
-      <div class="wrap"><p class="eyebrow eyebrow--light" data-hero>Contact</p><h1 id="h1" data-hero>Get a Free Roofing Quote in Calgary</h1><p class="phero__sub" data-hero>Please provide a few details to receive a free estimate for your roofing project.</p></div>
+      <div class="wrap"><p class="eyebrow eyebrow--light" data-hero>Contact</p><h1 id="h1">Get a Free Roofing Quote in Calgary</h1><p class="phero__sub" data-hero>Please provide a few details to receive a free estimate for your roofing project.</p></div>
     </section>
     <section class="sec" aria-labelledby="ct-h">
       <div class="wrap contact" >
@@ -153,8 +154,6 @@
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="js/main.js" defer></script>
   <script src="js/quote-wizard.js" defer></script>
 </body>

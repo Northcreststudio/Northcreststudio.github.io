@@ -27,8 +27,9 @@
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap">
-  <link rel="preload" as="image" href="assets/img/roof-valley-shingles-600.webp" fetchpriority="high">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700;800&family=Playfair+Display:wght@400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700;800&family=Playfair+Display:wght@400&display=swap"></noscript>
+  <link rel="preload" as="image" href="assets/img/roof-valley-shingles-400.webp" imagesrcset="assets/img/roof-valley-shingles-400.webp 400w, assets/img/roof-valley-shingles-600.webp 600w, assets/img/roof-valley-shingles.webp 900w" imagesizes="(max-width: 600px) 86vw, (max-width: 900px) 520px, 42vw" fetchpriority="high">
   <link rel="stylesheet" href="css/styles.css">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "RoofingContractor", "name": "StarEdge Builders", "description": "Calgary-based roofing company, family owned and operated. Residential asphalt shingle installation, replacement and repairs, plus gutter maintenance.", "url": "https://northcreststudio.github.io/staredge-builders/", "logo": "https://northcreststudio.github.io/staredge-builders/assets/img/staredge-logo-480.webp", "image": "https://northcreststudio.github.io/staredge-builders/assets/img/roof-valley-wide.webp", "telephone": "+1-403-926-1818", "email": "projects@staredgebuilders.com", "address": {"@type": "PostalAddress", "addressLocality": "Calgary", "addressRegion": "AB", "addressCountry": "CA"}, "areaServed": {"@type": "City", "name": "Calgary"}, "sameAs": ["https://www.instagram.com/staredge.builders/", "https://www.facebook.com/profile.php?id=61581405341908"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Roofing and gutter services", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "New Roof Installation"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Roof Replacement"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Roof Repairs"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Routine Gutter Cleaning"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Seasonal Gutter Maintenance"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Downspout cleaning and flushing"}}]}}</script>
 </head>
@@ -51,15 +52,15 @@
       <div class="wrap hero__grid">
         <div class="hero__copy">
           <p class="eyebrow" data-hero>Calgary, AB · Family owned &amp; operated</p>
-          <h1 id="h1" data-hero>Residential Roofing in <span>Calgary</span></h1>
+          <h1 id="h1">Residential Roofing in <span>Calgary</span></h1>
           <p class="hero__sub" data-hero>Asphalt shingle installation, replacement and repairs. Safe practices, quality craftsmanship and honest, reliable service every time.</p>
           <div class="hero__btns" data-hero>
             <button type="button" class="btn btn--orange btn--lg" data-quote>Get a Free Quote <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
             <a class="btn btn--line btn--lg" href="tel:+14039261818"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Call (403) 926-1818</a>
           </div>
         </div>
-        <figure class="hero__media" data-hero>
-          <div class="hero__frame"><img class="hero__img" src="assets/img/roof-valley-shingles-600.webp" srcset="assets/img/roof-valley-shingles-600.webp 600w, assets/img/roof-valley-shingles.webp 900w" sizes="(max-width: 900px) 92vw, 42vw" alt="Asphalt shingle roof valley with metal flashing on a StarEdge Builders job" width="600" height="800" fetchpriority="high"></div>
+        <figure class="hero__media">
+          <div class="hero__frame"><img class="hero__img" src="assets/img/roof-valley-shingles-400.webp" srcset="assets/img/roof-valley-shingles-400.webp 400w, assets/img/roof-valley-shingles-600.webp 600w, assets/img/roof-valley-shingles.webp 900w" sizes="(max-width: 600px) 86vw, (max-width: 900px) 520px, 42vw" alt="Asphalt shingle roof valley with metal flashing on a StarEdge Builders job" width="600" height="800" fetchpriority="high"></div>
           <figcaption><img src="assets/img/staredge-logo-240.webp" alt="" width="240" height="178">Residential asphalt shingle roofing</figcaption>
         </figure>
       </div>
@@ -74,7 +75,7 @@
         <div class="sec__head" data-anim><p class="eyebrow">Services</p><h2 id="svc-h">Roofs and gutters, done properly.</h2></div>
         <div class="svc2" data-stagger>
           <article class="svc-card" id="roofing-card">
-            <div class="svc-card__img"><img src="assets/img/roof-valley-wide-700.webp" srcset="assets/img/roof-valley-wide-700.webp 700w, assets/img/roof-valley-wide.webp 1200w" sizes="(max-width: 900px) 92vw, 46vw" alt="Shingled roof valley with metal flashing" width="700" height="393" loading="lazy"></div>
+            <div class="svc-card__img"><img src="assets/img/roof-valley-wide-450.webp" srcset="assets/img/roof-valley-wide-450.webp 450w, assets/img/roof-valley-wide-700.webp 700w, assets/img/roof-valley-wide.webp 1200w" sizes="(max-width: 900px) 92vw, 46vw" alt="Shingled roof valley with metal flashing" width="700" height="393" loading="lazy"></div>
             <div class="svc-card__body">
               <h3>Roofing Services</h3>
               <ul><li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>New Roof Installation</li><li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Roof Replacement</li><li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Roof Repairs</li></ul>
@@ -82,7 +83,7 @@
             </div>
           </article>
           <article class="svc-card" id="gutter-card">
-            <div class="svc-card__img"><img src="assets/img/gutter-maintenance.webp" alt="Gutter full of leaves beside an asphalt shingle roof" width="960" height="544" loading="lazy"></div>
+            <div class="svc-card__img"><img src="assets/img/gutter-maintenance-500.webp" srcset="assets/img/gutter-maintenance-500.webp 500w, assets/img/gutter-maintenance.webp 960w" sizes="(max-width: 900px) 92vw, 50vw" alt="Gutter full of leaves beside an asphalt shingle roof" width="960" height="544" loading="lazy"></div>
             <div class="svc-card__body">
               <h3>Gutter Maintenance</h3>
               <ul><li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Routine Gutter Cleaning</li><li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Seasonal Gutter Maintenance</li><li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Downspout cleaning and flushing</li></ul>
@@ -130,8 +131,8 @@
       <div class="wrap">
         <div class="sec__head" data-anim><p class="eyebrow">Our work</p><h2 id="work-h">From our jobs.</h2></div>
         <div class="gallery" data-stagger>
-          <a class="gallery__item" href="assets/img/roof-valley-shingles.webp" data-lightbox data-caption="Asphalt shingle roof valley with metal flashing"><img src="assets/img/roof-valley-shingles-600.webp" alt="Asphalt shingle roof valley with metal flashing" width="600" height="800" loading="lazy"></a>
-          <a class="gallery__item gallery__item--wide" href="assets/img/gutter-maintenance.webp" data-lightbox data-caption="Gutter full of leaves, ready for cleaning"><img src="assets/img/gutter-maintenance.webp" alt="Gutter full of leaves beside an asphalt shingle roof" width="960" height="544" loading="lazy"></a>
+          <a class="gallery__item" href="assets/img/roof-valley-shingles.webp" data-lightbox data-caption="Asphalt shingle roof valley with metal flashing"><img src="assets/img/roof-valley-shingles-400.webp" srcset="assets/img/roof-valley-shingles-400.webp 400w, assets/img/roof-valley-shingles-600.webp 600w" sizes="(max-width: 900px) 92vw, 36vw" alt="Asphalt shingle roof valley with metal flashing" width="600" height="800" loading="lazy"></a>
+          <a class="gallery__item gallery__item--wide" href="assets/img/gutter-maintenance.webp" data-lightbox data-caption="Gutter full of leaves, ready for cleaning"><img src="assets/img/gutter-maintenance-500.webp" srcset="assets/img/gutter-maintenance-500.webp 500w, assets/img/gutter-maintenance.webp 960w" sizes="(max-width: 900px) 92vw, 50vw" alt="Gutter full of leaves beside an asphalt shingle roof" width="960" height="544" loading="lazy"></a>
         </div>
       </div>
     </section>
@@ -254,8 +255,6 @@
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="js/main.js" defer></script>
   <script src="js/quote-wizard.js" defer></script>
 </body>

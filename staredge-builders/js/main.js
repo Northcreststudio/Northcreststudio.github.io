@@ -23,21 +23,26 @@
     if (e.target.closest('a')) { menuBtn.setAttribute('aria-expanded', 'false'); mnav.hidden = true; }
   });
 
-  /* ---------- GSAP + ScrollTrigger (skipped entirely when motion is reduced) ---------- */
-  if (!reduce && window.gsap && window.ScrollTrigger) {
+  /* ---------- GSAP + ScrollTrigger ----------
+     Loaded from cdnjs after the page has loaded, so it never delays the first paint.
+     Skipped entirely when the visitor prefers reduced motion. */
+  function loadScript(src) {
+    return new Promise(function (res, rej) { var s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
+  }
+  function initAnimations() {
     gsap.registerPlugin(ScrollTrigger);
+    var vh = window.innerHeight;
     gsap.defaults({ ease: 'power2.out', duration: 0.6 });
-
-    // Hero entrance
-    gsap.from('[data-hero]', { y: 30, opacity: 0, stagger: 0.1, delay: 0.05 });
 
     // Sections fade + slide up 30px
     $$('[data-anim]').forEach(function (el) {
+      if (el.getBoundingClientRect().top < vh * 0.85) return; // already on screen: don't hide it
       gsap.from(el, { y: 30, opacity: 0, scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
     });
 
     // Cards, list items and gallery stagger 0.1s apart
     $$('[data-stagger]').forEach(function (group) {
+      if (group.getBoundingClientRect().top < vh * 0.85) return;
       gsap.from(group.children, { y: 30, opacity: 0, stagger: 0.1, scrollTrigger: { trigger: group, start: 'top 88%', once: true } });
     });
 
@@ -46,6 +51,13 @@
     if (heroImg) {
       gsap.fromTo(heroImg, { yPercent: -6 }, { yPercent: 6, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
     }
+  }
+  if (!reduce) {
+    var start = function () {
+      var CDN = 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/';
+      loadScript(CDN + 'gsap.min.js').then(function () { return loadScript(CDN + 'ScrollTrigger.min.js'); }).then(initAnimations).catch(function () { /* content stays visible without animations */ });
+    };
+    if (document.readyState === 'complete') start(); else window.addEventListener('load', start);
   }
 
   /* ---------- Lightbox for the work gallery ---------- */
