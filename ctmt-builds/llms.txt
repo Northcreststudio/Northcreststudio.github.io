@@ -1,0 +1,27 @@
+# CTMT Builds Ltd.
+
+> CTMT Builds Ltd. is a framing contractor in British Columbia, Canada, run by Curtis Mountain. It frames new homes, multi-family and townhome projects, commercial wood buildings, roofs and trusses, additions and structural renovations. Phone and text: (250) 857-0881. Email: ctmtbuildsltd@gmail.com.
+
+## Services
+- [New Home Framing](https://northcreststudio.github.io/ctmt-builds/services.html#new-homes): Complete wood framing for custom homes and production builds, from floor system to roof.
+- [Multi-Family & Townhomes](https://northcreststudio.github.io/ctmt-builds/services.html#multi-family): Repeatable, accurate framing for townhomes, duplexes and multi-unit buildings.
+- [Commercial Wood Framing](https://northcreststudio.github.io/ctmt-builds/services.html#commercial): Structural wood framing for commercial and mixed-use buildings on demanding schedules.
+- [Roofs, Trusses & Sheathing](https://northcreststudio.github.io/ctmt-builds/services.html#roofs): Stick-framed roofs, truss installation and roof and wall sheathing.
+- [Additions & Structural Renovations](https://northcreststudio.github.io/ctmt-builds/services.html#renovations): Additions, garages, removed walls and structural changes tied cleanly into the existing house.
+- [Interior & Exterior Walls](https://northcreststudio.github.io/ctmt-builds/services.html#walls): Wall framing, basement development, blocking and backing done right the first time.
+
+## Key pages
+- [Home](https://northcreststudio.github.io/ctmt-builds/): overview, wall anatomy guide, stud calculator, FAQ
+- [Services](https://northcreststudio.github.io/ctmt-builds/services.html): what each framing service includes
+- [Projects](https://northcreststudio.github.io/ctmt-builds/projects.html): photo gallery and build stages
+- [About](https://northcreststudio.github.io/ctmt-builds/about.html): who runs CTMT Builds and how they work
+- [Contact](https://northcreststudio.github.io/ctmt-builds/contact.html): phone, text, email and the quote form
+
+## Quick facts
+- Business: CTMT Builds Ltd.
+- Trade: wood framing contractor
+- Owner / contact: Curtis Mountain
+- Phone and text: (250) 857-0881
+- Email: ctmtbuildsltd@gmail.com
+- Region: British Columbia, Canada
+- Quotes: free; send drawings, site address and start date
