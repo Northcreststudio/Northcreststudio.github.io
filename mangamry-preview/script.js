@@ -29,11 +29,11 @@
   }
 
   /* ---------- Hero glow follows the pointer ---------- */
-  var hero = $('.hero');
+  var hero = $('.hero'), glow = $('.hero__glow');
   if (finePointer && !reduce) {
     hero.addEventListener('pointermove', function (e) {
       var r = hero.getBoundingClientRect();
-      hero.style.setProperty('--gx', (e.clientX - r.left) + 'px'); hero.style.setProperty('--gy', (e.clientY - r.top) + 'px');
+      glow.style.transform = "translate(" + (e.clientX - r.left - 260) + "px," + (e.clientY - r.top - 260) + "px)";
     });
   }
 

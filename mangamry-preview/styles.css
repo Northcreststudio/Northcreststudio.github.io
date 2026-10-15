@@ -96,8 +96,8 @@ h3 { font-weight: 800; }
 .hero::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .55;
   background-image: linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
   background-size: 44px 44px; -webkit-mask-image: radial-gradient(80% 70% at 30% 40%, #000 30%, transparent 75%); mask-image: radial-gradient(80% 70% at 30% 40%, #000 30%, transparent 75%); }
-.hero__glow { position: absolute; width: 520px; height: 520px; left: var(--gx, 30%); top: var(--gy, 40%); transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(circle, rgba(251, 180, 15, .16), transparent 65%); pointer-events: none; transition: left .25s ease-out, top .25s ease-out; }
-.hero__grid { position: relative; display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(32px, 5vw, 80px); align-items: center; }
+.hero__glow { position: absolute; left: 0; top: 0; width: 520px; height: 520px; transform: translate(14vw, 120px); border-radius: 50%; background: radial-gradient(circle, rgba(251, 180, 15, .16), transparent 65%); pointer-events: none; transition: transform .25s ease-out; will-change: transform; }
+.hero__grid { position: relative; display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(32px, 5vw, 80px); align-items: start; }
 .hero__grid > * { min-width: 0; }
 .hero__eyebrow { display: inline-flex; align-items: center; gap: 12px; font-family: var(--head); font-weight: 800; font-size: 13.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--amber); margin-bottom: 22px; }
 .hero__eyebrow span { width: 34px; height: 2px; background: var(--amber); flex: none; }
@@ -120,8 +120,9 @@ h3 { font-weight: 800; }
 .bp__plan { position: absolute; inset: 0; background: #0B3D7E; clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
 .bp__plan img { filter: grayscale(1) contrast(1.7) brightness(1.15); mix-blend-mode: screen; opacity: .55; }
 .bp__plan::after { content: ""; position: absolute; inset: 0; background-image: linear-gradient(rgba(255, 255, 255, .16) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .16) 1px, transparent 1px); background-size: 28px 28px; }
-.bp__handle { position: absolute; top: 0; bottom: 0; left: var(--pos); width: 3px; margin-left: -1.5px; background: var(--amber); pointer-events: none; }
-.bp__handle svg { position: absolute; top: 50%; left: 50%; width: 52px; height: 52px; padding: 13px; margin: -26px 0 0 -26px; border-radius: 50%; background: var(--amber); fill: none; stroke: var(--navy-dark); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; box-shadow: 0 8px 24px rgba(0, 0, 0, .4); transition: transform .3s var(--ease); }
+.bp__handle { position: absolute; inset: 0; pointer-events: none; transform: translateX(var(--pos)); }
+.bp__handle::before { content: ""; position: absolute; top: 0; bottom: 0; left: -1.5px; width: 3px; background: var(--amber); }
+.bp__handle svg { position: absolute; top: 50%; left: 0; width: 52px; height: 52px; padding: 13px; margin: -26px 0 0 -26px; border-radius: 50%; background: var(--amber); fill: none; stroke: var(--navy-dark); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; box-shadow: 0 8px 24px rgba(0, 0, 0, .4); transition: transform .3s var(--ease); }
 .bp__frame:hover .bp__handle svg { transform: scale(1.08); }
 .bp__range { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; -webkit-appearance: none; appearance: none; }
 .bp__frame:has(.bp__range:focus-visible) { outline: 3px solid var(--amber); outline-offset: 4px; }
@@ -134,7 +135,7 @@ h3 { font-weight: 800; }
 .hero__stats { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: clamp(48px, 6vw, 80px); border-top: 1px solid rgba(255, 255, 255, .14); }
 .hero__stats li { padding: 26px 20px 30px; border-left: 1px solid rgba(255, 255, 255, .14); display: grid; gap: 4px; align-content: start; }
 .hero__stats li:first-child { border-left: 0; padding-left: 0; }
-.hero__stats b { font-family: var(--head); font-weight: 800; font-size: clamp(32px, 3.6vw, 48px); color: var(--white); line-height: 1; letter-spacing: -.03em; }
+.hero__stats b { font-family: var(--head); font-weight: 800; font-size: clamp(32px, 3.6vw, 48px); color: var(--white); line-height: 1; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
 .hero__stats li > span { font-size: 15px; font-weight: 600; }
 
 /* ---------- Marquee ---------- */
