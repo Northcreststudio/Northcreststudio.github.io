@@ -1,6 +1,10 @@
 /* Mangamry Construction Inc. — interactive redesign preview
    Brand (from mangamryconstruction.com): navy #061A36 / #0A2E5C, amber #FBB40F; fonts Manrope + DM Sans. */
 
+/* Size-matched fallbacks so text doesn't jump when the web fonts arrive */
+@font-face { font-family: "Manrope Fallback"; src: local("Arial"), local("Liberation Sans"), local("Helvetica Neue"), local("Helvetica"); size-adjust: 102%; ascent-override: 104%; descent-override: 29%; line-gap-override: 0%; }
+@font-face { font-family: "DM Sans Fallback"; src: local("Arial"), local("Liberation Sans"), local("Helvetica Neue"), local("Helvetica"); size-adjust: 99%; ascent-override: 98%; descent-override: 31%; line-gap-override: 0%; }
+
 :root {
   --navy-deep: #04122A;
   --navy-dark: #061A36;
@@ -14,8 +18,8 @@
   --ink: #0B1B33;
   --muted: #4E5E75;
   --on-navy: #C9D4E5;
-  --head: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --body: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --head: "Manrope", "Manrope Fallback", Arial, sans-serif;
+  --body: "DM Sans", "DM Sans Fallback", Arial, sans-serif;
   --ease: cubic-bezier(.22, 1, .36, 1);
   --gutter: clamp(16px, 4.5vw, 56px);
   --r: 18px;
