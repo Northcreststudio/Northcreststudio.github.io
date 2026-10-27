@@ -11,4 +11,4 @@ Each folder is a standalone client website preview, served by GitHub Pages at
 - `bett-n-court-roofs/` — Bett-N-Court Roofs (Airdrie roofing; stand-in stock photos, credited in the footer)
 - `dot-jordan/` — DOT Jordan (Digital Opportunity Trust Jordan, youth non-profit; "Get involved" form instead of quotes)
 - `ctmt-builds/` — CTMT Builds Ltd. (BC framing contractor; stand-in CC0 photos credited in the footer; Google review link set in `js/main.js`)
-- `imperial-finishing/` — Imperial Finishing Ltd (Calgary & Lake Country finishing carpentry; refreshed logo in `images/imperial-finishing-logo.png`; phone, email and reviews still to add)
+- `imperial-finishing/` — Imperial Finishing Ltd (Calgary & Lake Country finishing carpentry; interactive version: three.js 3D room studio in `js/room.js`, trim estimator and quote wizard in `js/main.js`; refreshed logo in `images/imperial-finishing-logo.png`; phone, email and reviews still to add)

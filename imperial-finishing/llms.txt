@@ -11,7 +11,7 @@
 - [Wainscoting and feature walls](https://northcreststudio.github.io/imperial-finishing/#services): wainscoting, board and batten, and panel moulding.
 
 ## Key pages
-- [Home](https://northcreststudio.github.io/imperial-finishing/): services, recent work, how a job works, about, service area, FAQ and the quote form
+- [Home](https://northcreststudio.github.io/imperial-finishing/): 3D room showing each stage of finishing work, services, kitchen project details, trim style profiles, a trim estimator, service area, FAQ and the quote form
 
 ## Quick facts
 - Business: Imperial Finishing Ltd
