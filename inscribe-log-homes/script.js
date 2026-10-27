@@ -101,7 +101,7 @@
   }
 
   /* ---------- Generic reveal ---------- */
-  var revealTargets = $$('.index, .h2, .about__photo, .about__text > p, .ledger, .craft__stage, .svc, .planx, .callout, .planner, .direct, .contact__lead, .footer__top, .rail-foot');
+  var revealTargets = $$('.index, .h2, .about__photo, .about__text > p, .ledger, .craft__stage, .svc, .planx, .callout, .planner, .direct, .contact__lead, .footer__top, .rail-foot, .trust, .ph-note, .reviews__grid, .route, .area__grid, .faq__lead, .faq__list');
   if (hasIO && !reduceMotion) {
     revealTargets.forEach(function (el, i) {
       el.setAttribute('data-reveal', '');
