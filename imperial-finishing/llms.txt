@@ -1,22 +1,55 @@
 # Imperial Finishing Ltd
 
-> Imperial Finishing Ltd is a custom finishing carpentry business in Calgary, Alberta, that also works in Lake Country, British Columbia. It is owned and run by Mike Robertson, a journeyman finishing carpenter. Established 2003.
+> Imperial Finishing Ltd is a custom finishing carpentry company in Calgary, Alberta, that also works in Lake Country, British Columbia. It is owned and run by Mike Robertson, a journeyman finishing carpenter. Established 2003.
+
+## Quick facts
+- Business: Imperial Finishing Ltd
+- Trade: custom finishing carpentry (also called finish carpentry or trim carpentry)
+- Owner: Mike Robertson, journeyman finishing carpenter
+- Based in: Calgary, Alberta, Canada
+- Service area: Calgary and surrounding communities; Lake Country and the Okanagan, BC
+- Established: 2003
+- Quotes: send the quote form at https://northcreststudio.github.io/imperial-finishing/#quote with photos of the space
+- Facebook: https://www.facebook.com/imperial.finishing.ltd/
 
 ## Services
-- [Kitchen cabinetry](https://northcreststudio.github.io/imperial-finishing/#services): cabinet installation set level, square and scribed to walls and ceilings.
-- [Trim and baseboards](https://northcreststudio.github.io/imperial-finishing/#services): baseboards, casing and crown moulding with tight mitres and coped corners.
-- [Doors and hardware](https://northcreststudio.github.io/imperial-finishing/#services): interior doors, casing, closet doors and hardware.
+- [Kitchen cabinet installation](https://northcreststudio.github.io/imperial-finishing/#services): cabinets set level and square, fitted tight to walls and ceilings.
+- [Trim and baseboards](https://northcreststudio.github.io/imperial-finishing/#services): baseboards, casing and crown moulding with tight mitres and clean inside corners.
+- [Interior doors and hardware](https://northcreststudio.github.io/imperial-finishing/#services): doors hung with even reveals, casing, closet doors and hardware.
 - [Built-ins and millwork](https://northcreststudio.github.io/imperial-finishing/#services): shelving, benches, mudroom lockers, entertainment walls and pantry storage.
 - [Stairs and railings](https://northcreststudio.github.io/imperial-finishing/#services): treads, risers, skirt boards, newel posts and railings.
 - [Wainscoting and feature walls](https://northcreststudio.github.io/imperial-finishing/#services): wainscoting, board and batten, and panel moulding.
 
-## Key pages
-- [Home](https://northcreststudio.github.io/imperial-finishing/): 3D room showing each stage of finishing work, services, kitchen project details, trim style profiles, a trim estimator, service area, FAQ and the quote form
+## Questions and answers
+### What is finishing carpentry?
+Finishing carpentry is the last carpentry stage in a home: installing the trim, doors, cabinets, built-ins and stair parts that stay visible after drywall and paint. It is also called finish carpentry or trim carpentry.
 
-## Quick facts
-- Business: Imperial Finishing Ltd
-- Trade: custom finishing carpentry
-- Owner: Mike Robertson, journeyman finishing carpenter
-- Based in: Calgary, Alberta
-- Service area: Calgary, AB and Lake Country, BC
-- Facebook: https://www.facebook.com/imperial.finishing.ltd/
+### What does Imperial Finishing do?
+Imperial Finishing Ltd does custom finishing carpentry: kitchen cabinet installation, baseboards, casing and crown moulding, interior doors and hardware, built-ins, stairs and railings, and wainscoting.
+
+### Where does Imperial Finishing work?
+Imperial Finishing works in Calgary, Alberta and surrounding communities, and in Lake Country in British Columbia's Okanagan.
+
+### What affects the cost of finishing carpentry?
+The main cost drivers are the amount of trim or number of pieces, the profile and material (paint-grade MDF or stain-grade hardwood), how many corners and cuts there are, and how level and square the walls are. A walkthrough gives you an exact number.
+
+### How long does a finishing carpentry job take?
+Baseboards and casing for a typical room often take a day or less. A full kitchen of cabinets usually takes several days. Start dates depend on the current schedule.
+
+### Paint-grade or stain-grade trim: what's the difference?
+Paint-grade trim is usually MDF or finger-jointed pine that gets filled, caulked and painted. Stain-grade trim is solid wood such as oak, chosen for its grain, so the joints have to be tight because there is no caulk to hide them.
+
+### What is the difference between finish carpentry and framing?
+Framing builds the structure of a house: walls, floors and roof. Finish carpentry comes after drywall and installs the woodwork you see every day, such as trim, doors, cabinets and built-ins.
+
+### Do I need a permit for finishing work?
+Trim, doors, cabinets and built-ins generally do not need a building permit on their own. Permits usually come into play when walls, structure, plumbing or electrical change as part of a wider renovation.
+
+### How do I get a quote from Imperial Finishing?
+Use the quote form on this page: choose the work you need, add your location, timing and photos of the space, and Mike Robertson will get back to you to set up a walkthrough and a written quote.
+
+## Key pages
+- [Home](https://northcreststudio.github.io/imperial-finishing/): overview, 3D room showing each stage of finishing work, services, a 3D model of a Calgary kitchen project, trim style profiles, a trim estimator, service area, FAQ and the quote form
+- [Quick answers](https://northcreststudio.github.io/imperial-finishing/#answers)
+- [FAQ](https://northcreststudio.github.io/imperial-finishing/#faq)
+- [Get a quote](https://northcreststudio.github.io/imperial-finishing/#quote)

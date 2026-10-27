@@ -3,26 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Custom Finishing Carpentry in Calgary | Imperial Finishing Ltd</title>
-  <meta name="description" content="Imperial Finishing Ltd: custom finishing carpentry in Calgary, AB and Lake Country, BC. Kitchen cabinetry, trim, doors and built-ins. Free quotes.">
-  <!-- Preview copy: kept out of search results. Remove at launch. -->
+  <title>Finishing Carpentry in Calgary &amp; Lake Country | Imperial Finishing</title>
+  <meta name="description" content="Calgary finishing carpentry by journeyman carpenter Mike Robertson: trim, baseboards, doors, kitchen cabinets and built-ins. Also serving Lake Country, BC.">
+  <!-- Preview copy: kept out of search results. At launch, change to: index, follow, max-image-preview:large, max-snippet:-1 -->
   <meta name="robots" content="noindex">
+  <meta name="author" content="Imperial Finishing Ltd">
+  <meta name="geo.region" content="CA-AB">
+  <meta name="geo.placename" content="Calgary">
+  <meta name="geo.position" content="51.0447;-114.0719">
+  <meta name="ICBM" content="51.0447, -114.0719">
   <meta name="theme-color" content="#14171a">
   <link rel="canonical" href="https://northcreststudio.github.io/imperial-finishing/">
+  <link rel="alternate" hreflang="en-CA" href="https://northcreststudio.github.io/imperial-finishing/">
+  <link rel="alternate" type="text/plain" title="Summary for AI assistants" href="llms.txt">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_CA">
   <meta property="og:site_name" content="Imperial Finishing Ltd">
-  <meta property="og:title" content="Custom Finishing Carpentry in Calgary | Imperial Finishing Ltd">
-  <meta property="og:description" content="Imperial Finishing Ltd: custom finishing carpentry in Calgary, AB and Lake Country, BC. Kitchen cabinetry, trim, doors and built-ins. Free quotes.">
+  <meta property="og:title" content="Finishing Carpentry in Calgary &amp; Lake Country | Imperial Finishing">
+  <meta property="og:description" content="Calgary finishing carpentry by journeyman carpenter Mike Robertson: trim, baseboards, doors, kitchen cabinets and built-ins. Also serving Lake Country, BC.">
   <meta property="og:url" content="https://northcreststudio.github.io/imperial-finishing/">
   <meta property="og:image" content="https://northcreststudio.github.io/imperial-finishing/images/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:alt" content="Imperial Finishing logo beside a finished white shaker kitchen with a walnut island">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Custom Finishing Carpentry in Calgary | Imperial Finishing Ltd">
-  <meta name="twitter:description" content="Imperial Finishing Ltd: custom finishing carpentry in Calgary, AB and Lake Country, BC. Kitchen cabinetry, trim, doors and built-ins. Free quotes.">
+  <meta name="twitter:title" content="Finishing Carpentry in Calgary &amp; Lake Country | Imperial Finishing">
+  <meta name="twitter:description" content="Calgary finishing carpentry by journeyman carpenter Mike Robertson: trim, baseboards, doors, kitchen cabinets and built-ins. Also serving Lake Country, BC.">
   <meta name="twitter:image" content="https://northcreststudio.github.io/imperial-finishing/images/og-image.jpg">
 
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
@@ -241,6 +249,16 @@ nav.main a:hover, nav.main a.on { color: #fff; }
 @media (max-width: 860px) { .trust ul { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 420px) { .trust ul { grid-template-columns: 1fr; } }
 
+/* Quick answers */
+section.band.answers { padding-block: clamp(36px, 5vw, 56px) 0; }
+.answers-h { font-size: clamp(1.3rem, 2.4vw, 1.6rem); font-weight: 800; letter-spacing: .04em; margin-bottom: 18px; }
+.qa-grid { margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.qa { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.qa dt { font: 500 .72rem/1.3 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--accent-text); }
+.qa dd { margin: 0; font-size: .95rem; line-height: 1.5; }
+@media (max-width: 960px) { .qa-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .qa-grid { grid-template-columns: 1fr; } }
+
 /* Services */
 .svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; perspective: 1200px; }
 .svc { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 26px 24px 22px; display: grid; gap: 12px; grid-template-rows: auto auto 1fr auto; position: relative; transform-style: preserve-3d; transform: rotateX(var(--rx, 0)) rotateY(var(--ry, 0)); transition: transform .35s var(--ease), box-shadow .35s; min-width: 0; overflow: hidden; }
@@ -261,10 +279,10 @@ nav.main a:hover, nav.main a.on { color: #fff; }
 .k-tabs button { min-height: 38px; padding: 0 14px; border: 0; border-radius: 6px; background: transparent; color: var(--muted); font-weight: 600; font-size: .9rem; }
 .k-tabs button[aria-selected="true"] { background: var(--surface); color: var(--fg); box-shadow: 0 1px 3px rgba(0,0,0,.15); }
 .k-frame { position: relative; aspect-ratio: 1206 / 904; max-width: 100%; border-radius: 10px; overflow: hidden; background: #1a2026; user-select: none; -webkit-user-select: none; }
-.k-frame img, .k-frame canvas { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
-.k-frame canvas { clip-path: inset(0 calc(100% - var(--pos, 50%)) 0 0); display: none; }
+.k-frame > img, #plan-canvas { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+#plan-canvas { clip-path: inset(0 calc(100% - var(--pos, 50%)) 0 0); display: none; }
 .k-frame .handle, .k-frame input[type=range], .k-frame .lbl { display: none; }
-.k-frame[data-mode="layout"] canvas, .k-frame[data-mode="layout"] .handle, .k-frame[data-mode="layout"] .lbl { display: block; }
+.k-frame[data-mode="layout"] #plan-canvas, .k-frame[data-mode="layout"] .handle, .k-frame[data-mode="layout"] .lbl { display: block; }
 .k-frame[data-mode="layout"] input[type=range] { display: block; }
 .k-frame[data-mode="layout"] .hs { display: none; }
 .k-frame .handle { position: absolute; top: 0; bottom: 0; left: var(--pos, 50%); width: 3px; margin-left: -1.5px; background: linear-gradient(180deg, #fff, #c7cdd3); box-shadow: 0 0 0 1px rgba(0,0,0,.25); pointer-events: none; }
@@ -272,6 +290,30 @@ nav.main a:hover, nav.main a.on { color: #fff; }
 .k-frame .lbl { position: absolute; top: 12px; font: 500 .7rem/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; padding: 7px 9px; border-radius: 4px; background: rgba(20,23,26,.82); color: #eef1f3; pointer-events: none; }
 .k-frame .lbl.l { left: 12px; } .k-frame .lbl.r { right: 12px; left: auto; }
 .k-frame input[type=range] { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+.k3d { position: absolute; inset: 0; display: none; touch-action: pan-y; cursor: grab; outline: none; background: radial-gradient(ellipse 80% 70% at 50% 40%, #343b42, #1a1e22 65%, #121417); }
+.k3d.dragging { cursor: grabbing; }
+.k3d:focus-visible { box-shadow: inset 0 0 0 3px var(--copper); }
+.k3d canvas { position: absolute; inset: 0; width: 100% !important; height: 100% !important; display: block; }
+.kitchen3d-ready .k3d .room-loading { display: none; }
+.k-frame[data-mode="model"] .k3d { display: block; }
+.k-frame[data-mode="model"] > img, .k-frame[data-mode="model"] > .hs { display: none; }
+.k3d-bar { position: absolute; left: 12px; top: 12px; display: flex; gap: 4px; padding: 4px; border-radius: 999px; background: rgba(15,17,20,.8); z-index: 2; }
+.k3d-zoom { position: absolute; right: 12px; bottom: 12px; display: grid; gap: 4px; z-index: 2; }
+.k3d-btn { min-height: 34px; min-width: 34px; padding: 0 12px; border-radius: 999px; border: 0; background: transparent; color: #cfd6dc; font: 600 .8rem/1 var(--body); }
+.k3d-zoom .k3d-btn { background: rgba(15,17,20,.8); font-size: 1.1rem; padding: 0; }
+.k3d-btn[aria-pressed="true"] { background: var(--steel); color: #14171a; }
+.hs3d { transition: opacity .25s, transform .2s var(--ease), background .2s; z-index: 1; }
+.k3d-tools { display: none; flex-wrap: wrap; gap: 10px 12px; align-items: center; margin-top: 12px; }
+.k-frame[data-mode="model"] ~ .k3d-tools { display: flex; }
+.k3d-tools .chip { background: var(--surface); color: var(--fg); border-color: var(--line); }
+.k3d-tools .chip:hover { border-color: var(--muted); color: var(--fg); }
+.k3d-tools .chip[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.k3d-tools .sw { border-color: var(--line); color: var(--muted); }
+.k3d-tools .sw:hover { color: var(--fg); }
+.k3d-tools .sw[aria-pressed="true"] { border-color: var(--fg); color: var(--fg); background: var(--bg); }
+.k-sw-l { font: 500 .7rem/1.2 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-left: 6px; }
+.no-kitchen3d #kt-model, .no-kitchen3d .k3d-tools { display: none !important; }
+@media (max-width: 560px) { .k3d-bar .k3d-btn { padding: 0 9px; font-size: .74rem; } .k-sw-l { width: 100%; margin: 4px 0 0; } }
 .hs { position: absolute; width: 34px; height: 34px; margin: -17px 0 0 -17px; border-radius: 50%; border: 0; background: rgba(20,23,26,.82); color: #fff; display: grid; place-items: center; font: 700 .85rem/1 var(--mono); box-shadow: 0 0 0 2px rgba(255,255,255,.9), 0 6px 14px rgba(0,0,0,.4); transition: transform .2s var(--ease), background .2s; }
 .hs::before { content: ""; position: absolute; inset: -6px; border-radius: 50%; border: 2px solid rgba(255,255,255,.7); animation: ping 2.4s var(--ease) infinite; }
 .hs:hover, .hs[aria-pressed="true"] { background: var(--walnut); transform: scale(1.12); }
@@ -500,8 +542,7 @@ footer.site { background: #0b0d0f; color: var(--on-carbon-muted); padding-block:
 }
   </style>
 
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "GeneralContractor", "@id": "https://northcreststudio.github.io/imperial-finishing/#business", "name": "Imperial Finishing Ltd", "url": "https://northcreststudio.github.io/imperial-finishing/", "logo": "https://northcreststudio.github.io/imperial-finishing/images/imperial-finishing-logo.png", "image": "https://northcreststudio.github.io/imperial-finishing/images/kitchen-cabinetry-calgary-1206.webp", "description": "Custom finishing carpentry in Calgary, Alberta and Lake Country, British Columbia.", "foundingDate": "2003", "employee": {"@type": "Person", "name": "Mike Robertson", "jobTitle": "Owner, journeyman finishing carpenter"}, "address": {"@type": "PostalAddress", "addressLocality": "Calgary", "addressRegion": "AB", "addressCountry": "CA"}, "areaServed": [{"@type": "City", "name": "Calgary"}, {"@type": "City", "name": "Lake Country"}], "sameAs": ["https://www.facebook.com/imperial.finishing.ltd/"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Finishing carpentry services", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kitchen cabinetry installation"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Trim and baseboards"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Doors and hardware"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Built-ins and millwork"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Stairs and railings"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Wainscoting and feature walls"}}]}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What affects the cost of finishing carpentry?", "acceptedAnswer": {"@type": "Answer", "text": "Mostly the amount of linear footage or number of pieces, the profile and material (paint-grade MDF versus stain-grade hardwood), how many corners and cuts are involved, and how level and square the walls are. A walkthrough gives you an exact number."}}, {"@type": "Question", "name": "Paint-grade or stain-grade: what's the difference?", "acceptedAnswer": {"@type": "Answer", "text": "Paint-grade trim is usually MDF or finger-jointed pine that gets filled, caulked and painted. Stain-grade trim is solid wood like oak, chosen for its grain, so joints have to be tight because there is no caulk to hide them."}}, {"@type": "Question", "name": "Do I need a permit for finishing work?", "acceptedAnswer": {"@type": "Answer", "text": "Trim, doors, cabinets and built-ins generally do not need a building permit on their own. Permits usually come into play when walls, structure, plumbing or electrical are changing as part of the wider renovation."}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://northcreststudio.github.io/imperial-finishing/#website", "url": "https://northcreststudio.github.io/imperial-finishing/", "name": "Imperial Finishing Ltd", "inLanguage": "en-CA", "publisher": {"@id": "https://northcreststudio.github.io/imperial-finishing/#business"}}, {"@type": "WebPage", "@id": "https://northcreststudio.github.io/imperial-finishing/#webpage", "url": "https://northcreststudio.github.io/imperial-finishing/", "name": "Finishing Carpentry in Calgary & Lake Country | Imperial Finishing", "description": "Calgary finishing carpentry by journeyman carpenter Mike Robertson: trim, baseboards, doors, kitchen cabinets and built-ins. Also serving Lake Country, BC.", "inLanguage": "en-CA", "isPartOf": {"@id": "https://northcreststudio.github.io/imperial-finishing/#website"}, "about": {"@id": "https://northcreststudio.github.io/imperial-finishing/#business"}, "primaryImageOfPage": {"@id": "https://northcreststudio.github.io/imperial-finishing/#kitchen-photo"}, "dateModified": "2026-10-27", "speakable": {"@type": "SpeakableSpecification", "cssSelector": ["#h1", "#answers .ans-a", "#faq-list .ans-a"]}}, {"@type": ["GeneralContractor", "HomeAndConstructionBusiness"], "@id": "https://northcreststudio.github.io/imperial-finishing/#business", "name": "Imperial Finishing Ltd", "alternateName": "Imperial Finishing", "url": "https://northcreststudio.github.io/imperial-finishing/", "description": "Custom finishing carpentry in Calgary, Alberta and Lake Country, British Columbia: kitchen cabinet installation, trim, doors, built-ins, stairs and wainscoting.", "foundingDate": "2003", "logo": "https://northcreststudio.github.io/imperial-finishing/images/imperial-finishing-logo.png", "image": {"@id": "https://northcreststudio.github.io/imperial-finishing/#kitchen-photo"}, "address": {"@type": "PostalAddress", "addressLocality": "Calgary", "addressRegion": "AB", "addressCountry": "CA"}, "geo": {"@type": "GeoCoordinates", "latitude": 51.0447, "longitude": -114.0719}, "areaServed": [{"@type": "City", "name": "Calgary", "containedInPlace": {"@type": "AdministrativeArea", "name": "Alberta"}}, {"@type": "City", "name": "Lake Country", "containedInPlace": {"@type": "AdministrativeArea", "name": "British Columbia"}}], "employee": {"@id": "https://northcreststudio.github.io/imperial-finishing/#mike"}, "knowsAbout": ["Finishing carpentry", "Finish carpentry", "Trim carpentry", "Kitchen cabinet installation", "Baseboards", "Door casing", "Crown moulding", "Interior doors", "Built-ins", "Stairs and railings", "Wainscoting"], "sameAs": ["https://www.facebook.com/imperial.finishing.ltd/"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Finishing carpentry services", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kitchen cabinet installation", "description": "Cabinet installation set level and square, fitted tight to walls and ceilings, with hardware and fillers finished clean.", "serviceType": "Finishing carpentry", "provider": {"@id": "https://northcreststudio.github.io/imperial-finishing/#business"}, "areaServed": [{"@type": "City", "name": "Calgary", "containedInPlace": {"@type": "AdministrativeArea", "name": "Alberta"}}, {"@type": "City", "name": "Lake Country", "containedInPlace": {"@type": "AdministrativeArea", "name": "British Columbia"}}]}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Trim and baseboards", "description": "Baseboards, casing and crown moulding with tight mitres and clean inside corners, ready for paint or stain.", "serviceType": "Finishing carpentry", "provider": {"@id": "https://northcreststudio.github.io/imperial-finishing/#business"}, "areaServed": [{"@type": "City", "name": "Calgary", "containedInPlace": {"@type": "AdministrativeArea", "name": "Alberta"}}, {"@type": "City", "name": "Lake Country", "containedInPlace": {"@type": "AdministrativeArea", "name": "British Columbia"}}]}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Interior doors and hardware", "description": "Interior doors hung with even reveals, plus casing, closet doors and hardware installed to match.", "serviceType": "Finishing carpentry", "provider": {"@id": "https://northcreststudio.github.io/imperial-finishing/#business"}, "areaServed": [{"@type": "City", "name": "Calgary", "containedInPlace": {"@type": "AdministrativeArea", "name": "Alberta"}}, {"@type": "City", "name": "Lake Country", "containedInPlace": {"@type": "AdministrativeArea", "name": "British Columbia"}}]}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Built-ins and millwork", "description": "Custom shelving, benches, mudroom lockers, entertainment walls and pantry storage built to fit the space.", "serviceType": "Finishing carpentry", "provider": {"@id": "https://northcreststudio.github.io/imperial-finishing/#business"}, "areaServed": [{"@type": "City", "name": "Calgary", "containedInPlace": {"@type": "AdministrativeArea", "name": "Alberta"}}, {"@type": "City", "name": "Lake Country", "containedInPlace": {"@type": "AdministrativeArea", "name": "British Columbia"}}]}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Stairs and railings", "description": "Stair treads, risers, skirt boards, newel posts and railings.", "serviceType": "Finishing carpentry", "provider": {"@id": "https://northcreststudio.github.io/imperial-finishing/#business"}, "areaServed": [{"@type": "City", "name": "Calgary", "containedInPlace": {"@type": "AdministrativeArea", "name": "Alberta"}}, {"@type": "City", "name": "Lake Country", "containedInPlace": {"@type": "AdministrativeArea", "name": "British Columbia"}}]}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Wainscoting and feature walls", "description": "Wainscoting, board and batten, and panel moulding.", "serviceType": "Finishing carpentry", "provider": {"@id": "https://northcreststudio.github.io/imperial-finishing/#business"}, "areaServed": [{"@type": "City", "name": "Calgary", "containedInPlace": {"@type": "AdministrativeArea", "name": "Alberta"}}, {"@type": "City", "name": "Lake Country", "containedInPlace": {"@type": "AdministrativeArea", "name": "British Columbia"}}]}}]}}, {"@type": "Person", "@id": "https://northcreststudio.github.io/imperial-finishing/#mike", "name": "Mike Robertson", "jobTitle": "Owner, journeyman finishing carpenter", "worksFor": {"@id": "https://northcreststudio.github.io/imperial-finishing/#business"}, "homeLocation": {"@type": "City", "name": "Calgary"}}, {"@type": "ImageObject", "@id": "https://northcreststudio.github.io/imperial-finishing/#kitchen-photo", "contentUrl": "https://northcreststudio.github.io/imperial-finishing/images/kitchen-cabinetry-calgary-1206.webp", "url": "https://northcreststudio.github.io/imperial-finishing/images/kitchen-cabinetry-calgary-1206.webp", "width": 1206, "height": 904, "caption": "White shaker kitchen with tall pantry cabinets and a walnut island, finished by Imperial Finishing in Calgary", "creditText": "Imperial Finishing Ltd"}, {"@type": "FAQPage", "@id": "https://northcreststudio.github.io/imperial-finishing/#faq", "mainEntity": [{"@type": "Question", "name": "What is finishing carpentry?", "acceptedAnswer": {"@type": "Answer", "text": "Finishing carpentry is the last carpentry stage in a home: installing the trim, doors, cabinets, built-ins and stair parts that stay visible after drywall and paint. It is also called finish carpentry or trim carpentry."}}, {"@type": "Question", "name": "What does Imperial Finishing do?", "acceptedAnswer": {"@type": "Answer", "text": "Imperial Finishing Ltd does custom finishing carpentry: kitchen cabinet installation, baseboards, casing and crown moulding, interior doors and hardware, built-ins, stairs and railings, and wainscoting."}}, {"@type": "Question", "name": "Where does Imperial Finishing work?", "acceptedAnswer": {"@type": "Answer", "text": "Imperial Finishing works in Calgary, Alberta and surrounding communities, and in Lake Country in British Columbia's Okanagan."}}, {"@type": "Question", "name": "What affects the cost of finishing carpentry?", "acceptedAnswer": {"@type": "Answer", "text": "The main cost drivers are the amount of trim or number of pieces, the profile and material (paint-grade MDF or stain-grade hardwood), how many corners and cuts there are, and how level and square the walls are. A walkthrough gives you an exact number."}}, {"@type": "Question", "name": "How long does a finishing carpentry job take?", "acceptedAnswer": {"@type": "Answer", "text": "Baseboards and casing for a typical room often take a day or less. A full kitchen of cabinets usually takes several days. Start dates depend on the current schedule."}}, {"@type": "Question", "name": "Paint-grade or stain-grade trim: what's the difference?", "acceptedAnswer": {"@type": "Answer", "text": "Paint-grade trim is usually MDF or finger-jointed pine that gets filled, caulked and painted. Stain-grade trim is solid wood such as oak, chosen for its grain, so the joints have to be tight because there is no caulk to hide them."}}, {"@type": "Question", "name": "What is the difference between finish carpentry and framing?", "acceptedAnswer": {"@type": "Answer", "text": "Framing builds the structure of a house: walls, floors and roof. Finish carpentry comes after drywall and installs the woodwork you see every day, such as trim, doors, cabinets and built-ins."}}, {"@type": "Question", "name": "Do I need a permit for finishing work?", "acceptedAnswer": {"@type": "Answer", "text": "Trim, doors, cabinets and built-ins generally do not need a building permit on their own. Permits usually come into play when walls, structure, plumbing or electrical change as part of a wider renovation."}}, {"@type": "Question", "name": "How do I get a quote from Imperial Finishing?", "acceptedAnswer": {"@type": "Answer", "text": "Use the quote form on this page: choose the work you need, add your location, timing and photos of the space, and Mike Robertson will get back to you to set up a walkthrough and a written quote."}}]}, {"@type": "HowTo", "@id": "https://northcreststudio.github.io/imperial-finishing/#process", "name": "How a finishing carpentry job works with Imperial Finishing", "step": [{"@type": "HowToStep", "position": 1, "name": "Walkthrough and measure", "text": "Mike looks at the space, talks through what you want and takes measurements."}, {"@type": "HowToStep", "position": 2, "name": "Clear written quote", "text": "You get a quote covering materials, labour and timing before any work is booked."}, {"@type": "HowToStep", "position": 3, "name": "Install and clean-up", "text": "The work is fitted, filled and finished, and the space is left clean and ready for paint or move-in."}]}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -642,11 +683,23 @@ footer.site { background: #0b0d0f; color: var(--on-carbon-muted); padding-block:
     </ul>
   </div>
 
+  <section class="band answers" id="answers" aria-labelledby="answers-h">
+    <div class="wrap">
+      <h2 id="answers-h" class="answers-h">Imperial Finishing at a glance</h2>
+      <dl class="qa-grid">
+        <div class="qa"><dt>Who is Imperial Finishing?</dt><dd class="ans-a">A custom finishing carpentry company in Calgary, Alberta, owned and run by journeyman finishing carpenter Mike Robertson. Established 2003.</dd></div>
+        <div class="qa"><dt>What do they do?</dt><dd class="ans-a">Kitchen cabinet installation, trim and baseboards, interior doors, built-ins, stairs and railings, and wainscoting.</dd></div>
+        <div class="qa"><dt>Where do they work?</dt><dd class="ans-a">Calgary and surrounding communities in Alberta, and Lake Country in BC's Okanagan.</dd></div>
+        <div class="qa"><dt>How do I get a quote?</dt><dd class="ans-a">Send the quote form with a few photos of the space. Mike sets up a walkthrough and gives you a written quote.</dd></div>
+      </dl>
+    </div>
+  </section>
+
   <section class="band" id="services" aria-labelledby="svc-h">
     <div class="wrap">
       <div class="sec-head rise">
         <p class="eyebrow">Services</p>
-        <h2 id="svc-h">The work you see every day</h2>
+        <h2 id="svc-h">Finishing carpentry services</h2>
         <p class="lede">Finishing carpentry is the last trade in and the one people notice most. Every piece is cut, fitted and left ready for paint or stain.</p>
         <p class="note">Preview note: services below are typical finishing carpentry work. Mike to confirm which ones he offers and add any we missed.</p>
       </div>
@@ -695,21 +748,47 @@ footer.site { background: #0b0d0f; color: var(--on-carbon-muted); padding-block:
     <div class="wrap">
       <div class="sec-head rise">
         <p class="eyebrow">Recent work</p>
-        <h2 id="work-h">A kitchen, up close</h2>
-        <p class="lede">Tap the numbered points to look at the details, or switch to the layout drawing and slide between plan and finished room.</p>
+        <h2 id="work-h">A Calgary kitchen, in 3D</h2>
+        <p class="lede">We built this kitchen as a 3D model from Mike's photo. Turn it, open the cabinets and try other colours. The photo and a layout drawing are in the other tabs.</p>
       </div>
       <div class="work-grid">
         <div style="min-width:0">
           <div class="k-tabs" role="tablist" aria-label="Kitchen view">
-            <button type="button" role="tab" id="kt-details" aria-selected="true" aria-controls="k-frame" data-mode="details">Details</button>
+            <button type="button" role="tab" id="kt-model" aria-selected="true" aria-controls="k-frame" data-mode="model">3D model</button>
+            <button type="button" role="tab" id="kt-details" aria-selected="false" aria-controls="k-frame" data-mode="details">Photo</button>
             <button type="button" role="tab" id="kt-layout" aria-selected="false" aria-controls="k-frame" data-mode="layout">Layout drawing</button>
           </div>
-          <div class="k-frame" id="k-frame" data-mode="details" role="tabpanel" aria-labelledby="kt-details" style="--pos: 50%">
+          <div class="k-frame" id="k-frame" data-mode="model" role="tabpanel" aria-labelledby="kt-model" style="--pos: 50%">
+            <div class="k3d" id="kitchen-stage" tabindex="0" role="img" aria-label="3D model of the kitchen: white shaker cabinets, a range with a chimney hood, a wine cubby, a fridge wrapped in pantry cabinets and a walnut island with a white quartz top. Drag or use the arrow keys to look around.">
+              <div class="room-loading">Building the kitchen…</div>
+              <div class="k3d-bar">
+                <button type="button" class="k3d-btn" data-kview="photo" aria-pressed="true">Photo angle</button>
+                <button type="button" class="k3d-btn" data-kview="island" aria-pressed="false">Island</button>
+                <button type="button" class="k3d-btn" data-kview="top" aria-pressed="false">Top view</button>
+              </div>
+              <div class="k3d-zoom"><button type="button" class="k3d-btn" data-kzoom="0.85" aria-label="Zoom in">+</button><button type="button" class="k3d-btn" data-kzoom="1.18" aria-label="Zoom out">−</button></div>
+            </div>
             <img id="k-img" src="images/kitchen-cabinetry-calgary-900.webp" srcset="images/kitchen-cabinetry-calgary-480.webp 480w, images/kitchen-cabinetry-calgary-900.webp 900w, images/kitchen-cabinetry-calgary-1206.webp 1206w" sizes="(max-width: 860px) 92vw, 62vw" width="1206" height="904" loading="lazy" decoding="async" alt="White shaker kitchen with tall pantry cabinets, a wine cubby and a walnut island with a marble-look top">
             <canvas id="plan-canvas" aria-hidden="true"></canvas>
             <span class="lbl l">Layout</span><span class="lbl r">Finished</span>
             <div class="handle"><div class="knob"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></div></div>
             <input type="range" id="compare-range" min="0" max="100" value="50" aria-label="Slide between the layout drawing and the finished kitchen">
+          </div>
+          <div class="k3d-tools" id="k3d-tools">
+            <button type="button" class="chip" id="k-doors" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 3h9v18H4zM13 5l7-2v18l-7-2"/></svg>Open the cabinets</button>
+            <button type="button" class="chip" id="k-replay"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>Watch the install</button>
+            <span class="k-sw-l" id="kl-cab">Cabinets</span>
+            <div class="swatches" role="group" aria-labelledby="kl-cab">
+              <button type="button" class="sw" data-kcab="white" aria-pressed="true"><span style="--c:#e9e8e4"></span>White (as built)</button>
+              <button type="button" class="sw" data-kcab="sage" aria-pressed="false"><span style="--c:#a7b39c"></span>Sage</button>
+              <button type="button" class="sw" data-kcab="navy" aria-pressed="false"><span style="--c:#2f3e55"></span>Navy</button>
+            </div>
+            <span class="k-sw-l" id="kl-isl">Island</span>
+            <div class="swatches" role="group" aria-labelledby="kl-isl">
+              <button type="button" class="sw" data-kisl="walnut" aria-pressed="true"><span style="--c:linear-gradient(100deg,#5a2f1f,#3b1d12 50%,#5a2f1f)"></span>Walnut (as built)</button>
+              <button type="button" class="sw" data-kisl="oak" aria-pressed="false"><span style="--c:#d8b07d"></span>White oak</button>
+              <button type="button" class="sw" data-kisl="charcoal" aria-pressed="false"><span style="--c:#34383c"></span>Charcoal</button>
+            </div>
           </div>
           <div class="k-detail" id="k-detail" aria-live="polite">
             <b id="hs-title">Tall uppers to the ceiling</b>
@@ -719,7 +798,7 @@ footer.site { background: #0b0d0f; color: var(--on-carbon-muted); padding-block:
             </div>
             <p id="hs-text"></p>
           </div>
-          <div class="k-cap"><span>Kitchen cabinetry · Calgary</span><span>The layout view is a drawing effect made from the finished photo.</span></div>
+          <div class="k-cap"><span>Kitchen cabinetry · Calgary</span><span id="k-cap-note">3D model built from the project photo. Sizes are approximate.</span></div>
         </div>
         <div class="slots">
           <div class="slot"><div><b>Trim &amp; baseboard photo here</b>A close-up of a clean mitre or crown corner</div></div>
@@ -839,7 +918,7 @@ footer.site { background: #0b0d0f; color: var(--on-carbon-muted); padding-block:
     <div class="wrap">
       <div class="sec-head rise">
         <p class="eyebrow">Service area</p>
-        <h2 id="area-h">Two home bases, one standard</h2>
+        <h2 id="area-h">Serving Calgary and Lake Country</h2>
         <p class="lede">Imperial Finishing works out of Calgary and Lake Country. Tap a location to see it on the map.</p>
       </div>
       <div class="area-grid">
@@ -856,14 +935,19 @@ footer.site { background: #0b0d0f; color: var(--on-carbon-muted); padding-block:
     <div class="wrap">
       <div class="sec-head rise">
         <p class="eyebrow">FAQ</p>
-        <h2 id="faq-h">Common questions</h2>
+        <h2 id="faq-h">Finishing carpentry questions, answered</h2>
       </div>
-      <div class="faq-list">
-        <details><summary>What affects the cost of finishing carpentry?<span class="pm" aria-hidden="true">+</span></summary><div class="ans"><p>Mostly the amount of linear footage or number of pieces, the profile and material (paint-grade MDF versus stain-grade hardwood), how many corners and cuts are involved, and how level and square the walls are. A walkthrough gives you an exact number. The <a href="#estimate">trim estimator</a> above gives a rough material count to start with.</p></div></details>
-        <details><summary>How soon can you start, and how long does a job take?<span class="pm" aria-hidden="true">+</span></summary><div class="ans"><p>Baseboards and casing for a typical room often take a day or less; a full kitchen of cabinets usually takes several days. Start dates depend on the current schedule.</p><p><span class="confirm">Confirm: current lead time</span></p></div></details>
-        <details><summary>Do you supply the materials, or can I buy my own?<span class="pm" aria-hidden="true">+</span></summary><div class="ans"><p><span class="confirm">Confirm with Mike</span> Many finish carpenters can do either. Supplying materials lets the carpenter pick stock that is straight and matched, while buying your own can suit a specific product you already chose.</p></div></details>
-        <details><summary>Paint-grade or stain-grade: what's the difference?<span class="pm" aria-hidden="true">+</span></summary><div class="ans"><p>Paint-grade trim is usually MDF or finger-jointed pine that gets filled, caulked and painted. Stain-grade trim is solid wood like oak, chosen for its grain, so joints have to be tight because there is no caulk to hide them. Try both looks with the trim finish buttons on the 3D room.</p></div></details>
-        <details><summary>Do I need a permit for finishing work?<span class="pm" aria-hidden="true">+</span></summary><div class="ans"><p>Trim, doors, cabinets and built-ins generally do not need a building permit on their own. Permits usually come into play when walls, structure, plumbing or electrical are changing as part of the wider renovation.</p></div></details>
+      <div class="faq-list" id="faq-list">
+        <details open><summary>What is finishing carpentry?<span class="pm" aria-hidden="true">+</span></summary><div class="ans"><p class="ans-a">Finishing carpentry is the last carpentry stage in a home: installing the trim, doors, cabinets, built-ins and stair parts that stay visible after drywall and paint. It is also called finish carpentry or trim carpentry.</p></div></details>
+        <details><summary>What does Imperial Finishing do?<span class="pm" aria-hidden="true">+</span></summary><div class="ans"><p class="ans-a">Imperial Finishing Ltd does custom finishing carpentry: kitchen cabinet installation, baseboards, casing and crown moulding, interior doors and hardware, built-ins, stairs and railings, and wainscoting.</p><p><span class="confirm">Confirm: service list</span></p></div></details>
+        <details><summary>Where does Imperial Finishing work?<span class="pm" aria-hidden="true">+</span></summary><div class="ans"><p class="ans-a">Imperial Finishing works in Calgary, Alberta and surrounding communities, and in Lake Country in British Columbia&#x27;s Okanagan.</p><p><span class="confirm">Confirm: nearby towns served</span></p></div></details>
+        <details><summary>What affects the cost of finishing carpentry?<span class="pm" aria-hidden="true">+</span></summary><div class="ans"><p class="ans-a">The main cost drivers are the amount of trim or number of pieces, the profile and material (paint-grade MDF or stain-grade hardwood), how many corners and cuts there are, and how level and square the walls are. A walkthrough gives you an exact number.</p><p>The <a href="#estimate">trim estimator</a> gives a rough material count to start with.</p></div></details>
+        <details><summary>How long does a finishing carpentry job take?<span class="pm" aria-hidden="true">+</span></summary><div class="ans"><p class="ans-a">Baseboards and casing for a typical room often take a day or less. A full kitchen of cabinets usually takes several days. Start dates depend on the current schedule.</p><p><span class="confirm">Confirm: current lead time</span></p></div></details>
+        <details><summary>Paint-grade or stain-grade trim: what&#x27;s the difference?<span class="pm" aria-hidden="true">+</span></summary><div class="ans"><p class="ans-a">Paint-grade trim is usually MDF or finger-jointed pine that gets filled, caulked and painted. Stain-grade trim is solid wood such as oak, chosen for its grain, so the joints have to be tight because there is no caulk to hide them.</p><p>Try both looks with the trim finish buttons on the 3D room.</p></div></details>
+        <details><summary>What is the difference between finish carpentry and framing?<span class="pm" aria-hidden="true">+</span></summary><div class="ans"><p class="ans-a">Framing builds the structure of a house: walls, floors and roof. Finish carpentry comes after drywall and installs the woodwork you see every day, such as trim, doors, cabinets and built-ins.</p></div></details>
+        <details><summary>Do I need a permit for finishing work?<span class="pm" aria-hidden="true">+</span></summary><div class="ans"><p class="ans-a">Trim, doors, cabinets and built-ins generally do not need a building permit on their own. Permits usually come into play when walls, structure, plumbing or electrical change as part of a wider renovation.</p></div></details>
+        <details><summary>How do I get a quote from Imperial Finishing?<span class="pm" aria-hidden="true">+</span></summary><div class="ans"><p class="ans-a">Use the quote form on this page: choose the work you need, add your location, timing and photos of the space, and Mike Robertson will get back to you to set up a walkthrough and a written quote.</p><p><span class="confirm">Confirm: quotes are free</span></p></div></details>
+        <details><summary>Do you supply the materials, or can I buy my own?<span class="pm" aria-hidden="true">+</span></summary><div class="ans"><p><span class="confirm">Confirm with Mike</span> Many finish carpenters can do either. Supplying materials lets the carpenter pick stock that is straight and matched, while buying your own can suit a product you already chose.</p></div></details>
         <details><summary>Is the work guaranteed?<span class="pm" aria-hidden="true">+</span></summary><div class="ans"><p><span class="confirm">Confirm: workmanship guarantee details</span></p></div></details>
       </div>
     </div>
@@ -878,7 +962,7 @@ footer.site { background: #0b0d0f; color: var(--on-carbon-muted); padding-block:
         <dl class="cinfo">
           <div><dt>Phone</dt><dd><span class="confirm">Confirm: phone number</span></dd></div>
           <div><dt>Email</dt><dd><span class="confirm">Confirm: email</span></dd></div>
-          <div><dt>Service area</dt><dd>Calgary, AB · Lake Country, BC</dd></div>
+          <div><dt>Service area</dt><dd><address style="font-style:normal">Calgary, AB · Lake Country, BC</address></dd></div>
           <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/imperial.finishing.ltd/" target="_blank" rel="noopener">facebook.com/imperial.finishing.ltd</a></dd></div>
         </dl>
       </div>
@@ -965,7 +1049,7 @@ footer.site { background: #0b0d0f; color: var(--on-carbon-muted); padding-block:
       <div><h4>Explore</h4><ul><li><a href="#studio">3D room</a></li><li><a href="#styles">Trim styles</a></li><li><a href="#estimate">Trim estimator</a></li><li><a href="#quote">Free quote</a></li></ul></div>
       <div><h4>Areas</h4><ul><li>Calgary, AB</li><li>Lake Country, BC</li></ul></div>
     </div>
-    <div class="foot-bottom"><span>© Imperial Finishing Ltd · Calgary, Alberta · Est. 2003</span><span>Website preview by Northcrest Studio</span></div>
+    <div class="foot-bottom"><span>© Imperial Finishing Ltd · Calgary, Alberta · Est. 2003 · Updated <time datetime="2026-10-27">October 27, 2026</time></span><span>Website preview by Northcrest Studio</span></div>
   </div>
 </footer>
 
@@ -976,6 +1060,7 @@ footer.site { background: #0b0d0f; color: var(--on-carbon-muted); padding-block:
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
 <script src="js/room.js" defer></script>
+<script src="js/kitchen.js" defer></script>
 <script src="js/main.js" defer></script>
 </body>
 </html>

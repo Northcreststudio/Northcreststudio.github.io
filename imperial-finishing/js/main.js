@@ -136,25 +136,28 @@
     { x: 10, y: 72, t: 'Drawer banks', d: 'Deep drawer banks with long bar pulls, lined up across every front.' },
     { x: 55, y: 80, t: 'Two-tone island', d: 'A dark wood island base against the white shaker perimeter gives the kitchen its two-tone look.' }
   ];
+  window.IFSpots = SPOTS;
   var frame = $('#k-frame');
   if (frame) {
-    var cur = 0;
+    var cur = 0, K = window.IFKitchen;
     SPOTS.forEach(function (s, i) {
       var b = document.createElement('button');
       b.type = 'button'; b.className = 'hs'; b.textContent = i + 1;
       b.style.left = s.x + '%'; b.style.top = s.y + '%';
       b.setAttribute('aria-label', 'Detail ' + (i + 1) + ': ' + s.t);
-      b.addEventListener('click', function () { showSpot(i); });
+      b.addEventListener('click', function () { showSpot(i, true); });
       frame.appendChild(b);
     });
-    function showSpot(i) {
+    function showSpot(i, fromUser) {
       cur = (i + SPOTS.length) % SPOTS.length;
       $('#hs-title').textContent = (cur + 1) + '. ' + SPOTS[cur].t;
       $('#hs-text').textContent = SPOTS[cur].d;
-      $$('.hs', frame).forEach(function (b, k) { b.setAttribute('aria-pressed', k === cur); });
+      $$('.hs', frame).forEach(function (b) { b.setAttribute('aria-pressed', +b.textContent - 1 === cur); });
+      if (fromUser && K && frame.dataset.mode === 'model') K.focus(cur);
     }
-    $('#hs-prev').addEventListener('click', function () { showSpot(cur - 1); });
-    $('#hs-next').addEventListener('click', function () { showSpot(cur + 1); });
+    window.IFShowSpot = function (i) { showSpot(i, true); };
+    $('#hs-prev').addEventListener('click', function () { showSpot(cur - 1, true); });
+    $('#hs-next').addEventListener('click', function () { showSpot(cur + 1, true); });
     showSpot(0);
 
     var img = $('#k-img'), canvas = $('#plan-canvas'), drawn = false;
@@ -186,10 +189,35 @@
         $$('.k-tabs button').forEach(function (b) { b.setAttribute('aria-selected', b === t); });
         frame.dataset.mode = t.dataset.mode;
         frame.setAttribute('aria-labelledby', t.id);
-        $('#k-detail').hidden = t.dataset.mode !== 'details';
+        $('#k-detail').hidden = t.dataset.mode === 'layout';
+        $('#k-cap-note').textContent = t.dataset.mode === 'model' ? '3D model built from the project photo. Sizes are approximate.' : t.dataset.mode === 'layout' ? 'The layout view is a drawing effect made from the finished photo.' : 'Project photo from Imperial Finishing.';
+        if (K) { if (t.dataset.mode === 'model') K.show(); else K.hide(); }
         if (t.dataset.mode === 'layout') { if (img.complete) drawPlan(); else img.addEventListener('load', drawPlan, { once: true }); }
       });
     });
+    // 3D model controls
+    if (K) {
+      var setPressed = function (sel, btn) { $$(sel).forEach(function (b) { b.setAttribute('aria-pressed', b === btn); }); };
+      $$('[data-kview]').forEach(function (b) { b.addEventListener('click', function () { K.view(b.dataset.kview); setPressed('[data-kview]', b); }); });
+      $$('[data-kzoom]').forEach(function (b) { b.addEventListener('click', function () { K.zoom(+b.dataset.kzoom); }); });
+      $$('[data-kcab]').forEach(function (b) { b.addEventListener('click', function () { K.cabinets(b.dataset.kcab); setPressed('[data-kcab]', b); }); });
+      $$('[data-kisl]').forEach(function (b) { b.addEventListener('click', function () { K.island(b.dataset.kisl); setPressed('[data-kisl]', b); }); });
+      $('#k-doors').addEventListener('click', function () {
+        var open = this.getAttribute('aria-pressed') !== 'true';
+        this.setAttribute('aria-pressed', open);
+        this.lastChild.textContent = open ? 'Close the cabinets' : 'Open the cabinets';
+        K.doors(open);
+      });
+      $('#k-replay').addEventListener('click', function () { var d = $('#k-doors'); d.setAttribute('aria-pressed', 'false'); d.lastChild.textContent = 'Open the cabinets'; K.replay(); });
+      if (document.documentElement.classList.contains('no-kitchen3d')) {
+        $('#kt-details').click();
+      } else if ('IntersectionObserver' in window) {
+        var ko = new IntersectionObserver(function (es) {
+          if (es[0].isIntersecting) { ko.disconnect(); if (frame.dataset.mode === 'model') K.show(); setTimeout(function () { if (document.documentElement.classList.contains('no-kitchen3d')) $('#kt-details').click(); }, 50); }
+        }, { rootMargin: '300px' });
+        ko.observe(frame);
+      } else K.show();
+    }
     var range = $('#compare-range');
     range.addEventListener('input', function () { frame.style.setProperty('--pos', range.value + '%'); });
   }
