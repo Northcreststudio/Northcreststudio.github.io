@@ -87,7 +87,7 @@
   ];
   var flips = $('#flips');
   if (flips) {
-    var GARAGE = '<svg viewBox="0 0 300 300" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;background:#16140f"><g fill="none" stroke="#c8a45f" stroke-width="2"><path d="M40 150 150 70l110 80"/><path d="M60 140v110h180V140"/><path d="M95 250v-70h110v70"/><path d="M95 198h110M95 216h110M95 234h110" stroke-width="1.2"/>' +
+    var GARAGE = '<svg viewBox="0 0 300 300" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;background:#15243a"><g fill="none" stroke="#c9d1db" stroke-width="2"><path d="M40 150 150 70l110 80"/><path d="M60 140v110h180V140"/><path d="M95 250v-70h110v70"/><path d="M95 198h110M95 216h110M95 234h110" stroke-width="1.2"/>' +
       [0, 1, 2, 3, 4, 5, 6, 7, 8].map(function (i) { return '<path d="M' + (72 + i * 19.5) + ' 140v' + (i % 3 === 1 ? 30 : 110) + '" stroke-width="1" opacity=".5"/>'; }).join('') + '<path d="M150 70v30" /><circle cx="150" cy="112" r="9"/></g></svg>';
     SERVICES.forEach(function (s, i) {
       var b = document.createElement('button');
@@ -181,11 +181,11 @@
       var oh = 2, wall = 8, ridgeRise = s / 2 * r / 12, ohDrop = oh * r / 12;
       var sc = Math.min(520 / (s + 2 * oh), 230 / (ridgeRise + wall + 1));
       var gy = 318, cx = 300, plateY = gy - wall * sc, ridgeY = plateY - ridgeRise * sc, half = s / 2 * sc;
-      var gold = '#c8a45f', gold2 = '#e3c88d', sil = '#bfc3c6', mut = '#6f675a';
-      for (var gx = 0; gx <= 600; gx += 20) el('line', { x1: gx, y1: 0, x2: gx, y2: 340, stroke: '#211e18', 'stroke-width': 1 }, psvg);
-      for (var gy2 = 0; gy2 <= 340; gy2 += 20) el('line', { x1: 0, y1: gy2, x2: 600, y2: gy2, stroke: '#211e18', 'stroke-width': 1 }, psvg);
+      var gold = '#8fb0d4', gold2 = '#eef2f6', sil = '#c9d1db', mut = '#5f7089';
+      for (var gx = 0; gx <= 600; gx += 20) el('line', { x1: gx, y1: 0, x2: gx, y2: 340, stroke: '#1b2a40', 'stroke-width': 1 }, psvg);
+      for (var gy2 = 0; gy2 <= 340; gy2 += 20) el('line', { x1: 0, y1: gy2, x2: 600, y2: gy2, stroke: '#1b2a40', 'stroke-width': 1 }, psvg);
       el('line', { x1: 20, y1: gy, x2: 580, y2: gy, stroke: mut, 'stroke-width': 2 }, psvg);
-      el('rect', { x: cx - half, y: plateY, width: half * 2, height: wall * sc, fill: 'rgba(200,164,95,.06)', stroke: sil, 'stroke-width': 2 }, psvg);
+      el('rect', { x: cx - half, y: plateY, width: half * 2, height: wall * sc, fill: 'rgba(201,209,219,.05)', stroke: sil, 'stroke-width': 2 }, psvg);
       for (var k = 1; k < s / 1.333; k++) { var x = cx - half + k * 1.333 * sc; if (x < cx + half - 2) el('line', { x1: x, y1: plateY, x2: x, y2: gy, stroke: sil, 'stroke-width': 0.6, opacity: 0.35 }, psvg); }
       // truss webbing
       var w = [[cx - half, plateY], [cx - half / 2, plateY - ridgeRise * sc / 2], [cx - half / 3, plateY], [cx, ridgeY], [cx + half / 3, plateY], [cx + half / 2, plateY - ridgeRise * sc / 2], [cx + half, plateY]];
@@ -234,29 +234,29 @@
     var AB = [[-120, 60], [-110, 60], [-110, 49]].concat(divide).concat([[-120, 60]]);
     var BC = [[-120, 60], [-139.05, 60], [-137.6, 59.2], [-135.4, 59.7], [-133.4, 58.4], [-131.8, 56.6], [-130.0, 55.9], [-130.5, 54.7], [-129.6, 53.5], [-128.4, 52.3], [-127.4, 51.0], [-125.4, 50.2], [-124.3, 49.4], [-123.1, 49.0]].concat(divide).concat([[-120, 60]]);
     var VI = [[-128.4, 50.8], [-127.2, 50.9], [-125.4, 50.2], [-123.5, 48.4], [-124.7, 48.6], [-126.5, 49.5]];
-    for (var gx = 0; gx <= 640; gx += 32) el('line', { x1: gx, y1: 0, x2: gx, y2: 420, stroke: '#1f1c17', 'stroke-width': 1 }, map);
-    for (var gy = 0; gy <= 420; gy += 32) el('line', { x1: 0, y1: gy, x2: 640, y2: gy, stroke: '#1f1c17', 'stroke-width': 1 }, map);
+    for (var gx = 0; gx <= 640; gx += 32) el('line', { x1: gx, y1: 0, x2: gx, y2: 420, stroke: '#1b2a40', 'stroke-width': 1 }, map);
+    for (var gy = 0; gy <= 420; gy += 32) el('line', { x1: 0, y1: gy, x2: 640, y2: gy, stroke: '#1b2a40', 'stroke-width': 1 }, map);
     var shapes = {
       bc: [el('path', { d: P(BC), class: 'shape' }, map), el('path', { d: P(VI), class: 'shape' }, map)],
       ab: [el('path', { d: P(AB), class: 'shape' }, map)]
     };
-    el('text', { x: X(-126.5), y: Y(55.2), fill: '#7d7464', 'font-family': 'Josefin Sans, Arial', 'font-weight': 700, 'font-size': 13, 'letter-spacing': 4, 'text-anchor': 'middle' }, map, 'BRITISH COLUMBIA');
-    el('text', { x: X(-114.8), y: Y(56.4), fill: '#7d7464', 'font-family': 'Josefin Sans, Arial', 'font-weight': 700, 'font-size': 13, 'letter-spacing': 4, 'text-anchor': 'middle' }, map, 'ALBERTA');
+    el('text', { x: X(-126.5), y: Y(55.2), fill: '#7f8ea3', 'font-family': 'Josefin Sans, Arial', 'font-weight': 700, 'font-size': 13, 'letter-spacing': 4, 'text-anchor': 'middle' }, map, 'BRITISH COLUMBIA');
+    el('text', { x: X(-114.8), y: Y(56.4), fill: '#7f8ea3', 'font-family': 'Josefin Sans, Arial', 'font-weight': 700, 'font-size': 13, 'letter-spacing': 4, 'text-anchor': 'middle' }, map, 'ALBERTA');
     [['Edmonton', -113.49, 53.55], ['Red Deer', -113.81, 52.27], ['Rocky Mtn House', -114.92, 52.37], ['Kamloops', -120.33, 50.67], ['Kelowna', -119.5, 49.89], ['Vancouver', -123.12, 49.28]].forEach(function (t) {
-      el('circle', { cx: X(t[1]), cy: Y(t[2]), r: 3, fill: '#8e8574' }, map);
-      el('text', { x: X(t[1]) + (t[0] === 'Rocky Mtn House' || t[0] === 'Kamloops' || t[0] === 'Vancouver' ? -6 : 6), y: Y(t[2]) + 4, fill: '#8e8574', 'font-family': 'DM Sans, Arial', 'font-size': 10, 'text-anchor': t[0] === 'Rocky Mtn House' || t[0] === 'Kamloops' || t[0] === 'Vancouver' ? 'end' : 'start' }, map, t[0]);
+      el('circle', { cx: X(t[1]), cy: Y(t[2]), r: 3, fill: '#8796ab' }, map);
+      el('text', { x: X(t[1]) + (t[0] === 'Rocky Mtn House' || t[0] === 'Kamloops' || t[0] === 'Vancouver' ? -6 : 6), y: Y(t[2]) + 4, fill: '#8796ab', 'font-family': 'DM Sans, Arial', 'font-size': 10, 'text-anchor': t[0] === 'Rocky Mtn House' || t[0] === 'Kamloops' || t[0] === 'Vancouver' ? 'end' : 'start' }, map, t[0]);
     });
     var cxp = X(-114.07), cyp = Y(51.05);
     [70, 140, 210].forEach(function (rr, i) {
-      var ring = el('circle', { cx: cxp, cy: cyp, r: rr, fill: 'none', stroke: '#c8a45f', 'stroke-width': 1, 'stroke-dasharray': '3 6', opacity: 0.45 - i * 0.12 }, map);
+      var ring = el('circle', { cx: cxp, cy: cyp, r: rr, fill: 'none', stroke: '#c9d1db', 'stroke-width': 1, 'stroke-dasharray': '3 6', opacity: 0.45 - i * 0.12 }, map);
       if (!reduce && ring.animate) ring.animate([{ strokeDashoffset: 0 }, { strokeDashoffset: i % 2 ? 90 : -90 }], { duration: 9000 + i * 3000, iterations: Infinity });
     });
-    var pulse = el('circle', { cx: cxp, cy: cyp, r: 10, fill: 'none', stroke: '#e3c88d', 'stroke-width': 2 }, map);
+    var pulse = el('circle', { cx: cxp, cy: cyp, r: 10, fill: 'none', stroke: '#eef2f6', 'stroke-width': 2 }, map);
     if (!reduce && pulse.animate) pulse.animate([{ r: 8, opacity: 1 }, { r: 30, opacity: 0 }], { duration: 2200, iterations: Infinity });
-    el('path', { d: 'M' + cxp + ' ' + (cyp - 10) + ' l10 10 -10 10 -10 -10z', fill: '#e3c88d', stroke: '#0d0c0a', 'stroke-width': 2 }, map);
-    el('text', { x: cxp + 16, y: cyp + 5, fill: '#f4efe3', 'font-family': 'Righteous, Arial', 'font-size': 18, 'letter-spacing': 2 }, map, 'CALGARY');
+    el('path', { d: 'M' + cxp + ' ' + (cyp - 10) + ' l10 10 -10 10 -10 -10z', fill: '#eef2f6', stroke: '#0f1b2d', 'stroke-width': 2 }, map);
+    el('text', { x: cxp + 16, y: cyp + 5, fill: '#f5f7fa', 'font-family': 'Righteous, Arial', 'font-size': 18, 'letter-spacing': 2 }, map, 'CALGARY');
     function setProv(k) {
-      Object.keys(shapes).forEach(function (n) { shapes[n].forEach(function (p) { p.setAttribute('fill', n === k ? 'rgba(200,164,95,.22)' : 'rgba(200,164,95,.06)'); p.setAttribute('stroke', n === k ? '#c8a45f' : '#4a4337'); p.setAttribute('stroke-width', n === k ? 2 : 1.2); }); });
+      Object.keys(shapes).forEach(function (n) { shapes[n].forEach(function (p) { p.setAttribute('fill', n === k ? 'rgba(201,209,219,.2)' : 'rgba(201,209,219,.05)'); p.setAttribute('stroke', n === k ? '#c9d1db' : '#3a4d68'); p.setAttribute('stroke-width', n === k ? 2 : 1.2); }); });
       $$('.prov').forEach(function (c) { c.setAttribute('aria-pressed', c.dataset.prov === k); });
     }
     $$('.prov').forEach(function (c) { c.addEventListener('click', function () { setProv(c.dataset.prov); }); });

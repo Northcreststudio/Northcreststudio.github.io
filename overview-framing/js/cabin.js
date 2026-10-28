@@ -23,13 +23,13 @@
   var look = new THREE.Vector3(0, 1.75, 0.3);
 
   // ---------- lights (day / dusk) ----------
-  var hemi = new THREE.HemisphereLight(0xe6edf3, 0x3a2f22, 0.8); scene.add(hemi);
+  var hemi = new THREE.HemisphereLight(0xe6edf3, 0x1d2a3d, 0.8); scene.add(hemi);
   var sun = new THREE.DirectionalLight(0xfff1dc, 0.9);
   sun.castShadow = true; sun.shadow.mapSize.set(2048, 2048);
   var sc = sun.shadow.camera; sc.left = -9; sc.right = 9; sc.top = 9; sc.bottom = -9; sc.far = 40;
   sun.shadow.bias = -0.0008; sun.shadow.radius = 3;
   scene.add(sun);
-  var rim = new THREE.DirectionalLight(0xd9b56a, 0.0); rim.position.set(-8, 4, -6); scene.add(rim);
+  var rim = new THREE.DirectionalLight(0xa9c4e6, 0.0); rim.position.set(-8, 4, -6); scene.add(rim);
   var glow = new THREE.PointLight(0xffb45c, 0, 7, 2); glow.position.set(0, 1.5, 0); scene.add(glow);
   var LIGHT = {
     day: { hemi: 0.8, hemiSky: new THREE.Color(0xe6edf3), sunC: new THREE.Color(0xfff1dc), sunI: 0.9, sunP: new THREE.Vector3(6, 10, 7), rim: 0.0, glow: 0 },
@@ -66,8 +66,8 @@
     ply: new THREE.MeshStandardMaterial({ color: 0xa88356, roughness: 0.9 }),
     concrete: new THREE.MeshStandardMaterial({ color: 0x77736c, roughness: 0.95 }),
     roof: new THREE.MeshStandardMaterial({ map: seam, roughness: 0.42, metalness: 0.55 }),
-    plinth: new THREE.MeshStandardMaterial({ color: 0x0c0b09, roughness: 1 }),
-    gold: new THREE.MeshStandardMaterial({ color: 0xc8a45f, emissive: 0x5a4114, emissiveIntensity: 0.6, roughness: 0.3, metalness: 0.8 })
+    plinth: new THREE.MeshStandardMaterial({ color: 0x0b1424, roughness: 1 }),
+    gold: new THREE.MeshStandardMaterial({ color: 0xc9d1db, emissive: 0x3c4c63, emissiveIntensity: 0.7, roughness: 0.25, metalness: 0.85 })
   };
 
   // ---------- stage / plinth ----------
