@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs>
+    <linearGradient id="ovGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1dca8"/><stop offset=".45" stop-color="#d4b06a"/><stop offset=".55" stop-color="#b8924a"/><stop offset="1" stop-color="#e0c27f"/></linearGradient>
+    <linearGradient id="ovSilver" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#c3c7ca"/><stop offset="1" stop-color="#9ea3a7"/></linearGradient>
+    <g id="ovHammer">
+      <path d="M-4 0 L4 0 L5 66 L-5 66 Z" fill="url(#ovGold)"/>
+      <path d="M-20 -14 L14 -14 L22 -8 L22 4 L14 8 L-20 8 Q-28 8 -30 -2 Q-28 -14 -20 -14 Z" fill="url(#ovGold)"/>
+      <path d="M-20 -6 L14 -6" stroke="#0d0c0a" stroke-width="2.5"/>
+    </g>
+    <g id="ovRoof">
+      <path d="M60 150 L200 40 L340 150" fill="none" stroke="url(#ovGold)" stroke-width="16" stroke-linejoin="miter"/>
+      <path d="M92 150 L200 64 L308 150" fill="none" stroke="#ffffff" stroke-width="6"/>
+      <path d="M112 154 L200 84 L288 154" fill="none" stroke="url(#ovSilver)" stroke-width="9"/>
+      <circle cx="200" cy="112" r="13" fill="url(#ovGold)"/>
+      <path d="M200 100 V124 M188 112 H212" stroke="#0d0c0a" stroke-width="3"/>
+      <g fill="url(#ovGold)"><rect x="40" y="166" width="104" height="9"/><rect x="52" y="182" width="92" height="9"/><rect x="64" y="198" width="80" height="9"/><rect x="256" y="166" width="104" height="9"/><rect x="256" y="182" width="92" height="9"/><rect x="256" y="198" width="80" height="9"/></g>
+      <use href="#ovHammer" transform="translate(56 120) rotate(-40)"/>
+      <use href="#ovHammer" transform="translate(344 120) rotate(40) scale(-1 1)"/>
+    </g>
+  </defs><rect width="64" height="64" rx="12" fill="#0d0c0a"/><svg x="4" y="8" width="56" height="44" viewBox="30 30 340 190"><use href="#ovRoof"/></svg></svg>
